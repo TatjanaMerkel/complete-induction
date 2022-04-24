@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-   <h1>Vollständige Induktion</h1>
+   <h1>Vollständige Induktion Uncool</h1>
   );
 }
 
