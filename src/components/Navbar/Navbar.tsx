@@ -3,8 +3,10 @@ import './Navbar.css';
 function Navbar() {
 
     return (
-        <div>
-            I'm Navbar-Component
+        <div className="flex-container">
+            Vollständige Induktion
+
+
         </div>
     );
 }
