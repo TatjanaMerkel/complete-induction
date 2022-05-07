@@ -1,11 +1,18 @@
 import React from "react";
+import './Home.css';
+import Navbar from "../Navbar/Navbar";
 
 function Home() {
 
     return (
         <div>
-            I'm a Home-Component
+            <Navbar/>
+            <div className="nav-container">
+
+                I'm a Home-Component
+            </div>
         </div>
+
     );
 }
 
