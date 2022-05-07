@@ -4,8 +4,9 @@ function Navbar() {
 
     return (
         <div className="flex-container">
-            Vollständige Induktion
-
+            <div className="title">
+                Vollständige Induktion
+            </div>
 
         </div>
     );
