@@ -1,0 +1,21 @@
+
+
+.bigblue {
+  color: DodgerBlue;
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+  
+.homeButton{
+  background-color: blue;
+  padding: 10px;
+  margin: 0px 50px 0px 50px;
+  width: 20%;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px black;
+  float: left;
+
+}
+
