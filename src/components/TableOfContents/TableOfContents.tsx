@@ -68,7 +68,7 @@ function TableOfContents() {
   const headings = useHeadings();
   const activeId = useScrollSpy(
     headings.map(({ id }) => id),
-    { rootMargin: "0% 0% -25% 0%" }
+    { rootMargin: "0% 0% -35% 0%" }
   );
   return (
     <nav className="toc">
