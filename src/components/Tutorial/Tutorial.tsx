@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../Home/Home.css';
 import './Tutorial.css';
 import Navbar from "../Navbar/Navbar";
-import TutorialCard from '../TutorialCard/TutorialCard';
+//import TutorialCard from '../TutorialCard/TutorialCard';
 import TableOfContents from '../TableOfContents/TableOfContents';
 import { Heading } from "../TableOfContents/TableOfContents";
 import InputField from '../InputField/InputField';

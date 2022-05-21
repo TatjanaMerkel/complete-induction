@@ -4,6 +4,7 @@ import './App.css';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Tutorial from './components/Tutorial/Tutorial';
 import { MathJax, MathJaxContext } from "better-react-mathjax";
+import TopicView from './components/TopicView/TopicView';
 
 function App() {
     const config = {
@@ -27,6 +28,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/tutorial" element={<Tutorial />} />
+                    <Route path="/topics" element={<TopicView />} />
+
                 </Routes>
             </Router>
             </MathJaxContext>
