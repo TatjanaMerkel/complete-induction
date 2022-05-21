@@ -1,9 +1,18 @@
 .smallIcon{
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
+    float: right;
+    filter: invert(100%);
 }
 
 .wideButton{
     width: 1000px;
-    padding-top: 10px;
+    padding: 25px 30px 20px 80px;
+    margin: 20px 100px 20px 100px;
+    border: none;
+    border-radius: 15px;
+    color:white;
+    font-size: 32pt;
+    font-weight: 600;
+    text-align: left;
 }
