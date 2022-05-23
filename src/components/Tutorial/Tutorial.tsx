@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import TableOfContents from '../TableOfContents/TableOfContents';
 import { Heading } from "../TableOfContents/TableOfContents";
 import InputField from '../InputField/InputField';
+import Back from "./../BackButton/Back";
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 function Tutorial() {
@@ -14,6 +15,7 @@ function Tutorial() {
     return (
         <div>
             <Navbar/>
+            <Back text="Home"/>
             {/*<TutorialCard title='Test' body="ldsfhshfslhfsoihdfsoiihf"/>*/}
             <div className="container">
                 <article>

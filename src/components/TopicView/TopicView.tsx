@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { IoSchoolSharp } from 'react-icons/io5';
 import { useNavigate } from 'react-router';
 import TopicButton from "./TopicButton";
+import Back from "./../BackButton/Back";
 import styles from './TopicView.module.css';
 
 
@@ -11,6 +12,7 @@ function TopicView() {
     return (
         <div>
             <Navbar />
+            <Back text="Home"/>
             <div className="nav-container">
                 <div className={styles.menu_buttons}>
                     <TopicButton text="Summen" icon={require("./../../files/icons/online-learning.png")} />
