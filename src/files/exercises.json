@@ -121,6 +121,62 @@
                 "1-((1)/(Math.fac((n+1)+1)",
                 "1-((1)/(Math.fac(n+2)"
             ]
+        },
+        {
+            "Aufgabenname": "Aufgabe 6",
+            "Kategorien": [
+                "Teilbarkeit"
+            ],
+            "Schwierigkeit": "leicht",
+            "Beschränkung": 1,
+            "Zahlenraum": "natürliche Zahlen",
+            "Aufgabenstellung": "Math.pow(10,n)-1 | 9",
+            "Rechenschritte_links": [
+                "Math.pow(10,n+1) - 1",
+                "Math.pow(10,n) * 10 - 1 ",
+                "Math.pow(10,n) + 9 * Math.pow(10,n) - 1 ",
+                "Math.pow(10,n)  - 1 + 9 * Math.pow(10,n)"
+            ],
+            "Rechenschritte_rechts": [
+                "| 9"
+            ]
+        },
+        {
+            "Aufgabenname": "Aufgabe 7",
+            "Kategorien": [
+                "Teilbarkeit"
+            ],
+            "Schwierigkeit": "mittel",
+            "Beschränkung": 1,
+            "Zahlenraum": "natürliche Zahlen",
+            "Aufgabenstellung": "n*(n+1) | 2",
+            "Rechenschritte_links": [
+                "(n+1)*((n+1)+1)",
+                "(n+1)*(n+2)",
+                "(n+1)*n + (n+1) * 2"
+            ],
+            "Rechenschritte_rechts": [
+                "| 2"
+            ]
+        },
+        {
+            "Aufgabenname": "Aufgabe 8",
+            "Kategorien": [
+                "Teilbarkeit"
+            ],
+            "Schwierigkeit": "leicht",
+            "Beschränkung": 1,
+            "Zahlenraum": "natürliche Zahlen",
+            "Aufgabenstellung": "Math.pow(8,n) -1 | 7",
+            "Rechenschritte_links": [
+                "Math.pow(8,n+1) -1",
+                "Math.pow(8,n) * 8 -1",
+                "Math.pow(8,n) + 7* Math.pow(8,n) -1",
+                "Math.pow(8,n) -1 + 7* Math.pow(8,n)"
+            ],
+            "Rechenschritte_rechts": [
+                "| 7"
+            ]
         }
     ]
 }
