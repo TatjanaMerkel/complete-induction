@@ -11,7 +11,7 @@ function darkenColor(color: string){
         case '#BF4C4C':
             return '#A83C3C';
         default:
-            return "#404040";
+            return "#2e3643";
     }
 
 
@@ -23,7 +23,7 @@ function TopicButton(props: { text: string; icon: string | undefined;}) {
     return (
         <button className={styles.wideButton} style={{backgroundColor: hover ? darkenColor("#343D4B"): "#343D4B"}} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             {props.text}
-            <img className={styles.smallIcon} src={props.icon}></img>        
+            <img className={styles.smallIcon} src={props.icon}></img>     
         </button>
     );
 }
