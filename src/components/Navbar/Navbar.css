@@ -6,13 +6,13 @@
 .flex-container {
     height: 58px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: #2e3642;
 }
 
 .title {
-    font-size: 1.2em;
+    font-size: 1.3em;
+    margin-left: 10px;
 }
 
 img {

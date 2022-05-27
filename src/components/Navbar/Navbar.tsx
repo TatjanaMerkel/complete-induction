@@ -9,6 +9,9 @@ function Navbar() {
             <div className="title">
                 Vollständige Induktion
             </div>
+            <div>
+
+            </div>
 
         </div>
     );
