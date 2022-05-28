@@ -18,7 +18,7 @@ function Home() {
             <div className="nav-container">
 
 
-                {childData && <Login/>}
+                {childData && <Login parentCallback ={handleCallback}/>}
             </div>
         </div>
 

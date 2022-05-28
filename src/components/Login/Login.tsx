@@ -1,8 +1,16 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './Login.css';
 
 
-function Login() {
+function Login(props: { parentCallback: (arg0: boolean) => void; }) {
+
+    const [showLogin, setShowLogin] = useState(true);
+
+    useEffect(() => { setShowLogin(false) }, [])
+
+    function removeLoginForm() {
+        props.parentCallback(showLogin);
+    }
 
 
     return (
@@ -10,7 +18,7 @@ function Login() {
             <form>
                 <h3>Login Here</h3>
                 <div className="position">
-                    <button className="button-cancel"/>
+                    <button className="button-cancel" onClick={removeLoginForm}/>
                 </div>
                 <label htmlFor="username">Username</label>
                 <input type="text" placeholder="Email" id="username"/>
