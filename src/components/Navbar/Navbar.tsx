@@ -9,8 +9,8 @@ function Navbar() {
             <div className="title">
                 Vollständige Induktion
             </div>
-            <div>
-
+            <div className="position">
+                <button className="button-navbar">Login</button>
             </div>
 
         </div>

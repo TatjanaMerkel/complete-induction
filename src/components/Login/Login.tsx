@@ -15,7 +15,7 @@ function Login() {
                 <label htmlFor="password">Password</label>
                 <input type="password" placeholder="Password" id="password"/>
 
-                <button>Log In</button>
+                <button className="button-login">Log In</button>
                 <div className="social">
                     <div className="go">
                         <img src={require('../../assets/google-icon.png')} alt="Google"/> Google
