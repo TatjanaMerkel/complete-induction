@@ -9,7 +9,9 @@ function Login() {
         <div>
             <form>
                 <h3>Login Here</h3>
-
+                <div className="position">
+                    <button className="button-cancel"/>
+                </div>
                 <label htmlFor="username">Username</label>
                 <input type="text" placeholder="Email" id="username"/>
                 <label htmlFor="password">Password</label>

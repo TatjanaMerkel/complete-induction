@@ -110,6 +110,7 @@ input {
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 .social {
@@ -137,4 +138,49 @@ input {
 
 .social i {
     margin-right: 4px;
+}
+
+
+.button-cancel {
+    border-radius: 50%;
+    padding: 0.5em;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.07);
+    background-color: rgba(255, 255, 255, 0.07);
+    position: relative;
+}
+.button-cancel:hover {
+    border: 2px solid #e5e5e5;
+    background-color: rgba(255, 255, 255, 0.13);
+    color: #e5e5e5;
+}
+
+.button-cancel::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #e5e5e5;
+    width: 2px;
+    left: 12px;
+    top: 5px;
+    bottom: 5px;
+    transform: rotate(45deg);
+}
+.button-cancel::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: white;
+    height: 2px;
+    top:12px;
+    left: 5px;
+    right: 5px;
+    transform: rotate(45deg);
+}
+
+.position {
+    padding: 5px;
+    top: 0;
+    right: 0;
 }
