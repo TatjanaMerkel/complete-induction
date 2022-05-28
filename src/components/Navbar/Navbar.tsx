@@ -1,16 +1,15 @@
 import './Navbar.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 function Navbar(props: { parentCallback: (arg0: boolean) => void; }) {
 
     const [showLogin, setShowLogin] = useState(false);
 
+    useEffect(() => { setShowLogin(true) }, [])
+
     function showLoginForm() {
-        useEffect(() => { setShowLogin(true) }, [])
         props.parentCallback(showLogin);
-        console.log("button clicked")
-        console.log(showLogin)
     }
 
 
