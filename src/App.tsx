@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Tutorial from './components/Tutorial/Tutorial';
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 import TopicView from './components/TopicView/TopicView';
+import Tutorial2 from './components/Tutorial2/Tutorial2';
 
 function App() {
     const config = {
@@ -21,21 +22,24 @@ function App() {
           ]
         }
       };
+    
     return (
         <div className='App'>
             <MathJaxContext version={3} config={config}>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/tutorial" element={<Tutorial />} />
-                    <Route path="/topics" element={<TopicView />} />
-
-                </Routes>
-            </Router>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/tutorial" element={<Tutorial />} />
+                        <Route path="/tutorial_2" element={<Tutorial2 />} />
+                        <Route path="/topics" element={<TopicView />} />
+                    </Routes>
+                </Router>
             </MathJaxContext>
         </div>
     );
 }
 
 export default App;
+
+
 
