@@ -24,7 +24,9 @@ function TopicView() {
                     <TopicButton text="Summen" icon={require("./../../files/icons/summenzeichen.png")} />
                     <br/>
                     <TopicButton text="Teilbarkeit" icon={require("./../../files/icons/discount.png")} />
-                    <br/><TopicButton text="Fakultäten" icon={require("./../../files/icons/exclamation-mark.png")} />
+                    <br/>
+                    <TopicButton text="Fakultäten" icon={require("./../../files/icons/exclamation-mark.png")} />
+                    <br/>
                     <TopicButton text="Ungleichung" icon={require("./../../files/icons/not-equal.png")} />
     
                 </div>

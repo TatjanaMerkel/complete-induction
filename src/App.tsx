@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Tutorial from './components/Tutorial/Tutorial';
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 import TopicView from './components/TopicView/TopicView';
+import TopicDifficultyView from './components/TopicView/TopicDifficulty/TopicDifficultyView';
 import Tutorial2 from './components/Tutorial2/Tutorial2';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                         <Route path="/tutorial" element={<Tutorial />} />
                         <Route path="/tutorial_2" element={<Tutorial2 />} />
                         <Route path="/topics" element={<TopicView />} />
+                        <Route path="/topicdifficulty" element={<TopicDifficultyView />} />
                     </Routes>
                 </Router>
             </MathJaxContext>

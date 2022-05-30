@@ -1,6 +1,6 @@
 import { ReactChild, ReactFragment, ReactPortal, useState } from "react";
 import styles from './TopicButton.module.css';
-
+import { useNavigate } from 'react-router';
 
 function darkenColor(color: string){
     switch(color){
@@ -19,9 +19,9 @@ function darkenColor(color: string){
 
 function TopicButton(props: { text: string; icon: string | undefined;}) {
     const [hover, setHover] = useState(false)
-    
+    let navigate = useNavigate();
     return (
-        <button className={styles.wideButton} style={{backgroundColor: hover ? darkenColor("#343D4B"): "#343D4B"}} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+        <button onClick={() => {navigate("/topicdifficulty");}}  className={styles.wideButton} style={{backgroundColor: hover ? darkenColor("#343D4B"): "#343D4B"}} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             {props.text}
             <img className={styles.smallIcon} src={props.icon}></img>     
         </button>
