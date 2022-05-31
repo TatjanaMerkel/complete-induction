@@ -1,7 +1,5 @@
 import React from 'react';
-import { Key, ReactChild, ReactFragment, ReactPortal } from 'react';
 import './TableOfContents.css'
-//import "./styles.css";
 
 type HeadingType = { id: string; text: string; level: number };
 function useHeadings() {
