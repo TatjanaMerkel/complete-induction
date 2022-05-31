@@ -19,7 +19,9 @@ function TopicDifficultyView() {
         <div>
             <Navbar parentCallback ={handleCallback}/>
             <BackBar texts={["Home", "Topics"]}/>
-            <TopicDifficultyWindow text={"test"} icon={require("./../../../files/icons/exclamation-mark.png")}/>
+            <div>
+                <TopicDifficultyWindow text={"test"} icon={require("./../../../files/icons/exclamation-mark.png")}/>
+            </div>
         </div>
     );
 }

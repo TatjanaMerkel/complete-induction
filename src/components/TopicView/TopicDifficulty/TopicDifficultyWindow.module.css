@@ -1,33 +1,70 @@
-.smallIcon{
-    width: 60px;
-    height: 60px;
-    float: right;
+.bigIcon{
+    width: 200px;
+    height: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
     filter: invert(100%);
 }
 
 .wideButton{
-    width: 1000px;
-    padding: 30px 45px 30px 80px;
-    margin: 20px 100px 20px 100px;
+    width: 400px;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 150px 20px 150px;
     border: none;
     border-radius: 15px;
     color:white;
-    font-size: 32pt;
+    font-size: 16pt;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
 }
 
-.p{
-    float: right;
-    text-align: right;
+p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 16pt;
+    margin: 10px 0px 10px 0px;
 
 }
 
 .whiteTextField{
     background-color: white;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 11pt;
+    font-weight: 200;
+    padding: 4px 5px 4px 5px;
+    margin-left: 200px;
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+
 }
 
 .bigIcon{
     width: 100px;
     height: 100px;
+}
+
+.frame {
+    width: 700px;
+    background-color: #222831;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: 400px;
+}
+
+.select{
+    width: 100px;
+    height: 30px;
+}
+
+.toppart{
+    align-items: center;
+    float:left;
+    width: 250px;
+}
+
+.css-1s2u09g-control{
+    background-color: #222831;
+    color: white;
 }

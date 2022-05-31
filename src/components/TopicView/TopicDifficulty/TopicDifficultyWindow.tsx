@@ -14,15 +14,17 @@ function TopicDifficultyWindow(props: { text: string; icon: string | undefined;}
       ]
 
     return (
-        <div>
-            <p className={styles.whiteTextField}>"LEKTION"</p>
-            <Select options={options} />
+        <div className={styles.frame}>
+            <div className={styles.toppart}>
+                <p className={styles.whiteTextField}>LEKTION</p>
+                <Select className={styles.select} options={options} />
+            </div>
             <br/>
-            <p>Induktionsbeweis: + {props.text}</p>
-            <img className={styles.bigIcon}>{props.icon}</img>
+            <p>Induktionsbeweis: {props.text}</p>
+            <img className={styles.bigIcon} src={props.icon}></img>
             <p>Löse jetzt X Aufgaben!</p>
             <button className={styles.wideButton} style={{backgroundColor: hover ? "#343D4B": "#CF4545"}} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-                "Los geht's"
+                Los geht's
             </button>
         </div>
     );

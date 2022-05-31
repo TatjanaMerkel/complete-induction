@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import './Home.css';
 import Navbar from "../Navbar/Navbar";
 import HomeElement from "./HomeElement";
-import { IoSchoolSharp } from 'react-icons/io5';
 import { useNavigate } from 'react-router';
 import Login from "../Login/Login";
 

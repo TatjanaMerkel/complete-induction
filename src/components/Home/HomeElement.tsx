@@ -1,6 +1,5 @@
 import { ReactChild, ReactFragment, ReactPortal, useState } from "react";
 import styles from './HomeElement.module.css';
-import { IoSchoolSharp } from 'react-icons/io5';
 
 
 function darkenColor(color: string){
