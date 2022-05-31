@@ -4,7 +4,7 @@ import './Tutorial.css';
 import Navbar from "../Navbar/Navbar";
 import TableOfContents from '../TableOfContents/TableOfContents';
 import { Heading } from "../TableOfContents/TableOfContents";
-import { MathJax, MathJaxContext } from "better-react-mathjax";
+import { MathJax } from "better-react-mathjax";
 import TutorialButton from '../TutorialButton/TutorialButton';
 import { IoArrowBack } from "react-icons/io5";
 import { IoArrowForward } from "react-icons/io5";
@@ -12,12 +12,6 @@ import { useNavigate } from 'react-router';
 import BackBar from "./../BackButton/BackBar";
 
 function Tutorial() {
-    const [childData, setState] = useState(false);
-
-
-    function handleCallback(childData: boolean) {
-        setState(childData)
-    }
 
     const DummyText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
     
@@ -26,7 +20,6 @@ function Tutorial() {
 
     return (
         <div>
-            <Navbar parentCallback={handleCallback}/>
             <BackBar texts={["Home"]}/>
             <TutorialButton onClick={() => {{navigate("/");}}}
             type="button"
