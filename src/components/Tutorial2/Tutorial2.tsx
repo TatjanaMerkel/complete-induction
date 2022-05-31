@@ -9,6 +9,7 @@ import TutorialButton from '../TutorialButton/TutorialButton';
 import { IoArrowBack } from "react-icons/io5";
 import { IoArrowForward } from "react-icons/io5";
 import { useNavigate } from 'react-router';
+import BackBar from "./../BackButton/BackBar";
 
 function Tutorial2() {
     const [childData, setState] = useState(false);
@@ -49,7 +50,7 @@ function Tutorial2() {
     return (
         <div>
             <Navbar parentCallback={handleCallback}/>
-            
+            <BackBar texts={["Home"]}/>
             <TutorialButton onClick={() => {{navigate("/tutorial");}}}
             type="button"
             buttonStyle="btn--primary--solid"

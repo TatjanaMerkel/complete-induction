@@ -1,0 +1,12 @@
+.menu_buttons{
+    background-color: #222831;
+    width: 1200px;
+    align-items: center;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 60px;   
+    margin-bottom: 70px;   
+}
