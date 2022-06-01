@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import "./TableOfContents.css";
+import './TableOfContents.css';
 
 type HeadingType = { id: string; text: string; level: number };
 
@@ -65,7 +65,7 @@ function useScrollSpy(ids: string[], options: IntersectionObserverInit) {
 }
 
 
-function TableOfContent2() {
+function TableOfContents() {
     const headings = useHeadings();
     const activeId = useScrollSpy(
         headings.map(({id}) => id),
@@ -94,4 +94,4 @@ function TableOfContent2() {
 }
 
 export {Heading};
-export default TableOfContent2;
+export default TableOfContents;

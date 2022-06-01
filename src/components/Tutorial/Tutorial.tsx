@@ -1,10 +1,10 @@
 import React from "react";
 import '../Home/Home.css';
 import './Tutorial.css';
-import TutorialCard from "./TutorialCard/TutorialCard";
-import TableOfContent2 from "./TableOfContents/TableOfContents";
+import TutorialCard from './TutorialCard/TutorialCard';
+import TableOfContents from './TableOfContents/TableOfContents';
 import {Heading} from "./TableOfContents/TableOfContents";
-import TutorialButton from "./TutorialButton/TutorialButton";
+import TutorialButton from './TutorialButton/TutorialButton';
 import {IoArrowBack} from "react-icons/io5";
 import {IoArrowForward} from "react-icons/io5";
 import BackBar from "./../BackButton/BackBar";
@@ -134,7 +134,7 @@ function Tutorial() {
                 </p>
 
             </TutorialCard>
-            <TableOfContent2/>
+            <TableOfContents/>
         </div>
     );
 }
