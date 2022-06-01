@@ -115,7 +115,7 @@ function App() {
                     </p>
                 </article>
             </TutorialCard>
-            {/*<TableOfContent2/>*/}
+            <TableOfContent2/>
         </div>
     );
 }

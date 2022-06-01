@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "./TableOfContents2.css";
 
 type HeadingType = { id: string; text: string; level: number };
 
 function useHeadings() {
-    const [headings, setHeadings] = React.useState<HeadingType[]>([]);
-    React.useEffect(() => {
+    const [headings, setHeadings] = useState<HeadingType[]>([]);
+    useEffect(() => {
         const elements = Array.from(document.querySelectorAll("h2, h3, h4, h5, h6"))
             .filter((element) => element.id)
             .map((element) => ({
@@ -17,6 +17,7 @@ function useHeadings() {
     }, []);
     return headings;
 }
+
 
 function getId(children: string) {
     return children
@@ -41,9 +42,9 @@ function Heading({children, id, as: Element, ...props}: HeadingProps) {
 }
 
 function useScrollSpy(ids: string[], options: IntersectionObserverInit) {
-    const [activeId, setActiveId] = React.useState<string>();
-    const observer = React.useRef<IntersectionObserver>();
-    React.useEffect(() => {
+    const [activeId, setActiveId] = useState<string>();
+    const observer = useRef<IntersectionObserver>();
+    useEffect(() => {
         const elements = ids.map((id) => document.getElementById(id));
         observer.current?.disconnect();
         observer.current = new IntersectionObserver((entries) => {
@@ -71,7 +72,7 @@ function TableOfContent2() {
         {rootMargin: "0% 0% -25% 0%"}
     );
     return (
-        <nav className="toc">
+        <nav className="tableOfContent">
             <h2>Table of content</h2>
             <ul>
                 {headings.map((heading) => (

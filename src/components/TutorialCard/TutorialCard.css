@@ -6,9 +6,9 @@
     border-radius: 30px;
     border: 2px solid black;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-60%, -50%)
 }
 
 .card-body {

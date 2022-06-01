@@ -1,37 +1,44 @@
 
-.toc {
+.tableOfContent {
     position: fixed;
-    top: 3em;
+    top: 10%;
     right: 1em;
     max-width: 30%;
+    color: white;
+    font-size: 22px;
+    background-color: #2e3642;
+    border-radius: 30px;
+    border: 2px solid black;
 }
 
-.toc h2 {
-    font-size: 1.25em;
+.tableOfContent h2 {
+    font-size: 25px;
+    padding: 12px;
 }
 
-.toc ul {
+.tableOfContent ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.toc li {
+.tableOfContent li {
     margin: 0;
     padding: 0;
 }
 
-.toc a {
+.tableOfContent a {
+    font-size: 18px;
     display: block;
     padding: 0.1em 0.2em;
-    margin-bottom: 0.1em;
+    margin-bottom: 0.3em;
     border-radius: 4px;
-    color: #333;
+    color: white;
     text-decoration: none;
     transition: all 0.3s ease-out;
 }
 
-.toc a:hover,
-toc a:focus-visible {
-    background-color: #eee;
+.tableOfContent a:hover,
+tableOfContent a:focus-visible {
+    color: #4a56f6;
 }
