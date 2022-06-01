@@ -1,7 +1,7 @@
 
 .tableOfContent {
     position: fixed;
-    top: 10%;
+    top: 14%;
     right: 1em;
     max-width: 30%;
     color: white;
@@ -31,8 +31,8 @@
 .tableOfContent a {
     font-size: 18px;
     display: block;
-    padding: 0.1em 0.2em;
-    margin-bottom: 0.3em;
+    padding: 0 8px;
+    margin: 0.1em 0.1em;
     border-radius: 4px;
     color: white;
     text-decoration: none;
