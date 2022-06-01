@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import '../Home/Home.css';
 import './Tutorial.css';
-import Navbar from "../Navbar/Navbar";
 import TableOfContents from '../TableOfContents/TableOfContents';
 import { Heading } from "../TableOfContents/TableOfContents";
 import { MathJax } from "better-react-mathjax";
@@ -48,7 +47,7 @@ function Tutorial() {
                                 Beweise schlussendlich dass gilt:`}
                             </MathJax>
                         </div>
-                        
+
                         <p>{DummyText}</p>
                         <Heading as="h2">The introduction</Heading>
                         <p>{DummyText}</p>
@@ -96,7 +95,7 @@ function Tutorial() {
                     </main>
                 </article>
             </div>
-            <div className="mainTable">
+            <div >
             <TableOfContents/>
             
             </div>
