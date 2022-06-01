@@ -3,7 +3,7 @@ import Home from "./components/Home/Home";
 import './App.css';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Tutorial from './components/Tutorial/Tutorial';
-import {MathJaxContext } from "better-react-mathjax";
+import {MathJaxContext} from "better-react-mathjax";
 import TopicView from './components/TopicView/TopicView';
 import Tutorial2 from './components/Tutorial2/Tutorial2';
 import Login from "./components/Login/Login";
@@ -17,6 +17,7 @@ function App() {
     function handleCallback(childData: boolean) {
         setState(childData)
     }
+
     const config = {
         loader: { load: ["[tex]/html"] },
         tex: {
@@ -31,7 +32,7 @@ function App() {
           ]
         }
       };
-    
+
     return (
 
         <div className='App'>
@@ -50,6 +51,8 @@ function App() {
             {childData && <Login parentCallback ={handleCallback}/>}
         </div>
     );
+
+
 }
 
 export default App;

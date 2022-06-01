@@ -1,0 +1,19 @@
+.card {
+    width: 75%;
+    color: white;
+    font-size: 1em;
+    background-color: #2e3642;
+    border-radius: 30px;
+    border: 2px solid black;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-60%, 0)
+}
+
+.card-body {
+    padding: 20px;
+
+}
+
+

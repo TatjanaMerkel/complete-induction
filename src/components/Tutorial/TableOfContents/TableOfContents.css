@@ -1,0 +1,45 @@
+
+.tableOfContent {
+    position: fixed;
+    top: 14%;
+    right: 1em;
+    max-width: 30%;
+    color: white;
+    font-size: 22px;
+    background-color: #2e3642;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.tableOfContent h2 {
+    font-size: 25px;
+    padding: 12px;
+}
+
+.tableOfContent ul {
+    list-style-position: inside;
+    margin: 1px;
+    padding: 2px;
+}
+
+.tableOfContent li {
+    list-style-type: circle;
+    margin: 0;
+    padding: 0;
+}
+
+.tableOfContent a {
+    font-size: 18px;
+    display: block;
+    padding: 0 8px;
+    margin: 0.1em 0.1em;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.tableOfContent a:hover,
+tableOfContent a:focus-visible {
+    color: #4a56f6;
+}
