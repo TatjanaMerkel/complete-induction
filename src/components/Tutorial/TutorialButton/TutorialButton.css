@@ -5,90 +5,90 @@
     --success: #ABE188;
     --white: #fdfdfd;
     --dark: #181717;
-  }
-  
-  .btn {
+}
+
+.btn {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     transform: scale(1.1);
-  }
-  
-  /* Button Colors and Styles */
-  
-  .btn--primary--solid {
+}
+
+/* Button Colors and Styles */
+
+.btn--primary--solid {
     background-color: var(--primary);
     color: var(--white);
     border: none;
-  }
-  
-  .btn--warning--solid {
+}
+
+.btn--warning--solid {
     background-color: var(--warning);
     color: var(--dark);
     border: none;
-  }
-  
-  .btn--danger--solid {
+}
+
+.btn--danger--solid {
     background-color: var(--danger);
     color: var(--white);
     border: none;
-  }
-  
-  .btn--success--solid {
+}
+
+.btn--success--solid {
     background-color: var(--success);
     color: var(--white);
     border: none;
-  }
-  
-  .btn--primary--outline {
+}
+
+.btn--primary--outline {
     background-color: transparent;
     border: 2px solid var(--primary);
     color: var(--primary);
-  }
-  
-  .btn--warning--outline {
+}
+
+.btn--warning--outline {
     background-color: transparent;
     border: 2px solid var(--warning);
     color: var(--warning);
-  }
-  
-  .btn--danger--outline {
+}
+
+.btn--danger--outline {
     background-color: transparent;
     border: 2px solid var(--danger);
     color: var(--danger);
-  }
-  
-  .btn--success--outline {
+}
+
+.btn--success--outline {
     background-color: transparent;
     border: 2px solid var(--success);
     color: var(--success);
-  }
-  
-  /* Button Size */
-  
-  .btn--medium {
+}
+
+/* Button Size */
+
+.btn--medium {
     padding: 10px 50px;
     font-size: 18px;
-  }
-  
-  .btn--large {
+}
+
+.btn--large {
     padding: 15px 30px;
     font-size: 20px;
-  }
+}
 
-  .btn--left{
+.btn--left {
     top: 68em;
     right: 119em;
     position: fixed;
-  }
+}
 
-  .btn--right{
+.btn--right {
     top: 68em;
     right: 14em;
     position: fixed;
-  }
+}
