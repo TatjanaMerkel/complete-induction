@@ -17,11 +17,12 @@ function darkenColor(color: string){
 
 }
 
-function TopicButton(props: { text: string; icon: string | undefined;}) {
+function TopicButton(props: { text: string; icon: string | undefined; id: number;}) {
     const [hover, setHover] = useState(false)
     let navigate = useNavigate();
-    return (
-        <button onClick={() => {navigate("/topicdifficulty");}}  className={styles.wideButton} style={{backgroundColor: hover ? darkenColor("#343D4B"): "#343D4B"}} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    const buttonId = props.id;
+    return ( 
+        <button className={styles.wideButton} style={{backgroundColor: hover ? darkenColor("#343D4B"): "#343D4B"}} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onClick={(id) => {navigate("/topics/topicdifficulty/"+buttonId);}}  >
             {props.text}
             <img className={styles.smallIcon} src={props.icon}></img>     
         </button>

@@ -33,7 +33,7 @@ function App() {
                         <Route path="/tutorial" element={<Tutorial />} />
                         <Route path="/tutorial_2" element={<Tutorial2 />} />
                         <Route path="/topics" element={<TopicView />} />
-                        <Route path="/topics/topicdifficulty" element={<TopicDifficultyView />} />
+                        <Route path="/topics/topicdifficulty/:id" element={<TopicDifficultyView />} />
                     </Routes>
                 </Router>
             </MathJaxContext>
