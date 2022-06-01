@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import "./TableOfContents2.css";
+import "./TableOfContents.css";
 
 type HeadingType = { id: string; text: string; level: number };
 
