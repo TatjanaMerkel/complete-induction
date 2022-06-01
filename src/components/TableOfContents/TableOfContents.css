@@ -7,7 +7,7 @@ article {
     .toc {
       position: fixed;
       top: 7em;
-      right: -10em;
+      right: 0;
       max-width: 30%;
     }
     

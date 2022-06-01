@@ -1,8 +1,16 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #1F2233;
+    color: #D8DEE9;
+}
+
 .container {
-    max-width: 1500px;
+    max-width: 1050px;
     margin: 0 auto;
     display: flex;
 }
+
 
 main {
     max-width: 1500px;
@@ -10,15 +18,9 @@ main {
     padding: 16px;
     border-radius: 8px;
     margin-left: 8px;
-    margin: 50px 0px 0px 0px;
 }
 
-body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    background-color: #1F2233;
-    color: #D8DEE9;
-}
+
 
 .mainTable{
     max-width: 800px;
@@ -27,7 +29,7 @@ body {
     border-radius: 8px;
     position: fixed;
     top: 3em;
-    right: -10em;
+    right: 100px;
     width:155px;
     height: 275px;
     margin: 58px 400px 0px 400px;
