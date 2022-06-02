@@ -114,8 +114,11 @@ function Tutorial() {
 
             </TutorialCard>
             <TableOfContents/>
+            <button className="btn previous round">&#8250; </button>
+            <button className="btn next round">&#8249; </button>
         </div>
-    );
+    )
+        ;
 }
 
 export default Tutorial;
