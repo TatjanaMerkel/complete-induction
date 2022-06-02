@@ -5,7 +5,6 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Tutorial from './components/Tutorial/Tutorial';
 import {MathJaxContext} from "better-react-mathjax";
 import TopicView from './components/TopicView/TopicView';
-import Tutorial2 from './components/Tutorial2/Tutorial2';
 import Login from "./components/Login/Login";
 import Navbar from "../src/components/Navbar/Navbar";
 
@@ -43,7 +42,6 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/tutorial" element={<Tutorial />} />
-                        <Route path="/tutorial_2" element={<Tutorial2 />} />
                         <Route path="/topics" element={<TopicView />} />
                     </Routes>
                 </Router>
