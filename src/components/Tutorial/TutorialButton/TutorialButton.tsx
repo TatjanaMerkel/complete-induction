@@ -3,16 +3,9 @@ import "./TutorialButton.css"
 
 const STYLES = [
     "btn--primary--solid",
-    "btn--warning--solid",
-    "btn--danger--solid",
-    "btn--success--solid",
-    "btn--primary--outline",
-    "btn--warning--outline",
-    "btn--danger--outline",
-    "btn--success--outline"
 ];
 
-const SIZES = ["btn--medium", "btn--large"];
+const SIZES = ["btn--medium"];
 
 const POSITIONS = ["btn--left", "btn--right"];
 

@@ -73,7 +73,7 @@ function TableOfContents() {
     );
     return (
         <nav className="tableOfContent">
-            <h2>Table of content</h2>
+            <h2>Tutorial</h2>
             <ul>
                 {headings.map((heading) => (
                     <li key={heading.id}>
