@@ -37,15 +37,7 @@ function Tutorial() {
             </TutorialButton>
 
             <TutorialCard>
-                <h1>The documentation page</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
-                    voluptates assumenda eos accusamus eius magnam similique aspernatur
-                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
-                    laudantium dignissimos!
-                </p>
-
-                <Heading as="h2">The introduction</Heading>
+                <Heading as="h1">Was ist vollständige Induktion?</Heading>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
                     voluptates assumenda eos accusamus eius magnam similique aspernatur
@@ -95,7 +87,7 @@ function Tutorial() {
                     laudantium dignissimos!
                 </p>
 
-                <Heading as="h2">How to get started</Heading>
+                <Heading as="h2">Von Dominoketten und der Unendlichkeit</Heading>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
                     voluptates assumenda eos accusamus eius magnam similique aspernatur
@@ -103,7 +95,7 @@ function Tutorial() {
                     laudantium dignissimos!
                 </p>
 
-                <Heading as="h2">Advanced usage</Heading>
+                <Heading as="h2">Das Induktionsrezept</Heading>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
                     voluptates assumenda eos accusamus eius magnam similique aspernatur
@@ -111,7 +103,7 @@ function Tutorial() {
                     laudantium dignissimos!
                 </p>
 
-                <Heading as="h3">Using upside-down</Heading>
+                <Heading as="h2">Interaktive Beispiel</Heading>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
                     voluptates assumenda eos accusamus eius magnam similique aspernatur
@@ -119,19 +111,6 @@ function Tutorial() {
                     laudantium dignissimos!
                 </p>
 
-                <Heading as="h3">Easter eggs</Heading>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
-                    voluptates assumenda eos accusamus eius magnam similique aspernatur
-                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
-                    laudantium dignissimos!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
-                    voluptates assumenda eos accusamus eius magnam similique aspernatur
-                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
-                    laudantium dignissimos!
-                </p>
 
             </TutorialCard>
             <TableOfContents/>
