@@ -36,3 +36,11 @@ body {
 .some{
     overflow: hidden;
 }
+
+.domino_img{
+    width: 700px;
+    height: 200px;
+    margin-left: 200px;
+
+    border-radius: 0px;
+}

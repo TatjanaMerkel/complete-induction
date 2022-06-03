@@ -44,9 +44,16 @@ function Tutorial() {
             <div className="container">
                 <article>
                     <main>
-                        <h1>The documentation page</h1>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
+                        <h1>Vollständige Induktion: Was ist das?</h1>
+                        <p>"Die vollständige Induktion ist ein Beweisverfahren, mit dem du Aussagen für die ganzen natürlichen Zahlen beweisen kannst. Das funktioniert wie bei einer Reihe von Dominosteinen. Du schubst den ersten Stein an und musst dann nur noch dafür sorgen, dass der jeweils nächste Stein umgestoßen wird."</p>
+                        <img className="domino_img" src={require("./../../files/icons/Domino.png")}></img>
+                        <p>"Die vollständige Induktion besteht aus folgenden Schritten: <br/>
+                            1. Der Induktionsanfang: Hier wird gezeigt, dass die Aussage für den Startwert gilt. <br/>
+                            2. Die Induktionsvorraussetzung: Nun gehst du davon aus, dass die Aussage für ein beliebiges n gilt. <br/>
+                            3. Die Induktionsbehauptung: Jetzt gehst du davon aus, dass es auch für jedes beliebige n+1 gilt. (n -&gt n+1)"<br/>
+                            4. Der Induktionsschluss: Schlussendlich wird mit Hilfe der Induktionsvoraussetzung gezeigt, dass es auch für n+1 gilt.<br/>
+                            <br/>
+                            Den Induktionsbeweis kannst du für den Beweis verschiedenster Aussagen benutzen. Darunter Summengleichungen, Fakultäten, Teilbarkeitsaussagen, Ungleichungen und vieles mehr. </p>
                         <div>
                             <MathJax hideUntilTypeset={"first"}>
                                 {`Dies ist eine Testaufgabe um Aufgaben auszuprobieren. Beweise das folgendes gilt: \\(x\\) or \\(\\frac{25x}{10} = 2^{10}\\), beweise anschließend,
