@@ -18,8 +18,8 @@
   .homeButton{
     padding: 10px;
     margin: 0px 50px 0px 50px;
-    width: 20%;
-    height: 180px;
+    width: 180px;
+    height: 210px;
     border-radius: 10px;
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
     float: left;
@@ -37,8 +37,10 @@
   }
   
   .homeIcon  {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     padding-bottom: 5px;
     filter: invert(100%);
+    border-radius: 0px;
+    border: none;
   }
