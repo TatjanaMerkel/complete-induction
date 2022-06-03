@@ -17,7 +17,11 @@ function TopicDifficultyWindow(props: { text: string; icon: string | undefined;}
         <div className={styles.frame}>
             <div className={styles.toppart}>
                 <p className={styles.whiteTextField}>LEKTION</p>
-                <Select className={styles.select} options={options} />
+                <select className={styles.select}>
+                    <option value="easy"> Einfach</option>
+                    <option value="medium"> Mittel</option>
+                    <option value="hard"> Schwer</option>
+                </select>
             </div>
             <br/>
             <p>Induktionsbeweis: {props.text}</p>
