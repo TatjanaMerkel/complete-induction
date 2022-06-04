@@ -27,9 +27,10 @@ function Tutorial() {
 
     //function that adds latex code to the last selected input field
     function changing(symbol: any) {
-        if (buttonIndex == 1) {
+        if (buttonIndex == 1){
             setValue(`${value} ${symbol}`)
-        } else {
+        }
+        if (buttonIndex == 2){
             setValue2(`${value2} ${symbol}`)
         }
     }
@@ -52,13 +53,37 @@ function Tutorial() {
                                onChange={(event) => setValue2(event.target.value)}/>
                         <div className="symbolBackground">
                             <button className="symbolButton"
-                                    onClick={() => changing(`\\sum_{n = }^{}\\left(\\right)`)}>Σ
+                                onClick={() => changing(`\\sum_{n = 1}^{k}`)}>
+                                <img src={require("./../../files/icons/sum-button.png")} style={{ margin: 0}}/>
                             </button>
-                            <button className="symbolButton">√</button>
-                            <button className="symbolButton">α</button>
-                            <button className="symbolButton">∏</button>
-                            <button className="symbolButton">∫</button>
-                            <button className="symbolButton">π</button>
+                            <button className="symbolButton"
+                                onClick={() => changing(`\\prod_{i = 0}^{n}`)}>
+                                <img src={require("./../../files/icons/mult-button.png")} style={{ margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                onClick={() => changing(`\\frac{n}{k}`)}>
+                                <img src={require("./../../files/icons/fraction-button.png")} style={{ margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                onClick={() => changing(`x^{n}`)}>
+                                <img src={require("./../../files/icons/exponent-button.png")} style={{ margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                onClick={() => changing(`\\left(x\\right)`)}>
+                                <img src={require("./../../files/icons/braket-button.png")} style={{ margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                onClick={() => changing(`\\sqrt{}`)}>
+                                <img src={require("./../../files/icons/root-button.png")} style={{ margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                onClick={() => changing(`\\sqrt[2]{}`)}>
+                                <img src={require("./../../files/icons/root-button2.png")} style={{ margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                onClick={() => changing(`\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}`)}>
+                                <img src={require("./../../files/icons/matrix-button.png")} style={{ margin: 0}}/>
+                            </button>
                         </div>
                     </MathJax>
                     <MathJax>{`An example is the equation $$${value} + ${value2}$$`}</MathJax>
