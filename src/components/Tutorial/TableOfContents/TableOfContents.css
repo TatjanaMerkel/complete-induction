@@ -2,7 +2,7 @@
     position: fixed;
     top: 14%;
     right: 1em;
-    max-width: 30%;
+    max-width: 18%;
     color: white;
     font-size: 22px;
     background-color: #2e3642;
@@ -11,7 +11,8 @@
 }
 
 .tableOfContent h2 {
-    font-size: 25px;
+    text-align: center;
+    font-size: 24px;
     padding: 12px;
 }
 
