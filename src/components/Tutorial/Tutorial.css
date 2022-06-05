@@ -1,4 +1,20 @@
 
+.cardTitle {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.picture {
+    width: 500px;
+    height: 300px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
 .btn {
     position: absolute;
     display: inline-block;
