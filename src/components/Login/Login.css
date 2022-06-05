@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-img {
+.icon {
     height: 32px;
     width: 32px;
 }
