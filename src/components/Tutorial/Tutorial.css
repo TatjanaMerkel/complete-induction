@@ -6,8 +6,16 @@
 }
 
 .picture {
+    border-radius: 5%;
     width: 500px;
     height: 300px;
+    display: block;
+    margin: 30px auto;
+    border: 5px solid #ffffff;
+}
+
+#colorText {
+    color:  #29b6f6
 }
 
 p {

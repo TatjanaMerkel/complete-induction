@@ -14,6 +14,8 @@ function Tutorial() {
     const naturalNumber = `\\(\\mathbb{N}\\)`;
     const naturalNumberNull = `\\(\\mathbb{N}_0\\) `;
     const naturalNumberAmount = `\\(\\mathbb{N}=\\{1, 2, 3, ... \\}\\)`;
+    const nNull = `\\(n_0 \\) `;
+    const n = `\\(n \\)`;
 
     let navigate = useNavigate();
 
@@ -47,50 +49,33 @@ function Tutorial() {
                 </div>
 
                 <p>
-                    Die vollständige Induktion ist ein Beweisschema, nach der eine Aussage für alle natürlichen Zahlen
-                    bewiesen wird.
-                    Die natürlichen Zahlen {naturalNumber} sind dabei die Menge {naturalNumberAmount}. {naturalNumberNull}
+                    Die vollständige Induktion ist ein Beweisschema, nach der eine Aussage <b id="colorText">für alle
+                    natürlichen Zahlen </b> bewiesen wird.
+                    Die natürlichen Zahlen {naturalNumber} sind dabei die
+                    Menge {naturalNumberAmount}. {naturalNumberNull}
                     beschreibt alle natürlichen Zahlen inklusive der 0.
                 </p>
                 <br/>
                 <p>
-                    Da es unendlich viele Zahlen gibt und deine Lebenszeit begrenzt ist, können nicht alle Zahlen durchprobiert werden.
-                    Stattdessen wird ein Domino-Prinzip verwendet.
+                    Da es unendlich viele Zahlen gibt und deine Lebenszeit begrenzt ist, können nicht alle Zahlen
+                    durchprobiert werden.
+                    Stattdessen wird ein <b id="colorText">Domino-Prinzip </b> verwendet.
+                    <br/>
                     <img className="picture" src={require('../../../src/assets/DominoEffect.jpg')} alt="DominoEffekt"/>
+                </p>
 
-
-
-                </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
-                    voluptates assumenda eos accusamus eius magnam similique aspernatur
-                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
-                    laudantium dignissimos!
+                    Es wird gedanklich den ersten Dominostein einer Dominokette umgestoßen. Der erste
+                    Dominostein <b id="colorText">{nNull}</b>
+                    fällt um und stößt den nächten Dominostein, seinen <b id="colorText">Nachfolger (n+1)</b> in der Kette um. Der (n+1)-te
+                    Stein
+                    stößt wiederum seinen Nachfolger (n+2) um und immer so weiter. Am Ende werden alle Dominosteine
+                    fallen.
+                    Der Fall eines Steins entspricht im Kontext eines <b id="colorText">Induktionsbeweises</b> dem Testen der Behauptung für
+                    ein {n}.
                 </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
-                    voluptates assumenda eos accusamus eius magnam similique aspernatur
-                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
-                    laudantium dignissimos!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
-                    voluptates assumenda eos accusamus eius magnam similique aspernatur
-                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
-                    laudantium dignissimos!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
-                    voluptates assumenda eos accusamus eius magnam similique aspernatur
-                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
-                    laudantium dignissimos!
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
-                    voluptates assumenda eos accusamus eius magnam similique aspernatur
-                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
-                    laudantium dignissimos!
-                </p>
+                <br/>
+               
 
                 <Heading as="h2">Von Dominoketten und der Unendlichkeit</Heading>
                 <p>
@@ -172,15 +157,15 @@ function Tutorial() {
             </TutorialCard>
             <TableOfContents/>
 
-            <button onClick={() => {
-                navigate("/")
-            }}
-                    className="btn previous round">&#8250; </button>
-            <button
-                onClick={() => {
-                    navigate("/")
-                }}
-                className="btn next round">&#8249; </button>
+            {/*<button onClick={() => {*/}
+            {/*    navigate("/")*/}
+            {/*}}*/}
+            {/*        className="btn previous round">&#8250; </button>*/}
+            {/*<button*/}
+            {/*    onClick={() => {*/}
+            {/*        navigate("/")*/}
+            {/*    }}*/}
+            {/*    className="btn next round">&#8249; </button>*/}
         </div>
     )
         ;
