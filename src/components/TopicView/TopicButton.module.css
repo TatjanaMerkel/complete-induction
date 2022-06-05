@@ -3,6 +3,8 @@
     height: 60px;
     float: right;
     filter: invert(100%);
+    border-radius: 0px;
+    border: none;
 }
 
 .wideButton{
