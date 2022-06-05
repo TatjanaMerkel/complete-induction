@@ -15,7 +15,7 @@ function Navbar(props: { parentCallback: (arg0: boolean) => void; }) {
 
     return (
         <div className="flex-container">
-            <img src={require('../../assets/dominoes.png')} alt="logo"/>
+            <img className="icon" src={require('../../assets/dominoes.png')} alt="logo"/>
             <div className="title">
                 Vollständige Induktion
             </div>
