@@ -1,3 +1,6 @@
+.container {
+    display: flex;
+}
 
 .cardTitle {
     font-size: 22px;
@@ -15,7 +18,7 @@
 }
 
 #colorText {
-    color:  #29b6f6
+    color: #29b6f6
 }
 
 p {
@@ -24,11 +27,12 @@ p {
 }
 
 .btn {
-    position: absolute;
+    position: relative;
     display: inline-block;
     padding: 8px 16px;
+    width: 60px;
+    height: 60px;
     font-size: 2em;
-    bottom: 12px;
 }
 
 .btn:hover {
@@ -39,27 +43,27 @@ p {
 .previous {
     background-color: #29b6f6;
     color: white;
-    right: 21%;
     border-radius: 50%;
-
+    left: 10%;
+    margin-bottom: 50px;
 }
 
 .next {
     background-color: #29b6f6;
     color: white;
-    left: 6%;
     border-radius: 50%;
+    left: 75%;
 }
 
-.symbolBackground{
+.symbolBackground {
     background-color: #9d52ff;
     padding: 16px;
     border-radius: 8px;
-    margin-right:584px;
-    margin-left:700px;
+    margin-right: 584px;
+    margin-left: 700px;
 }
 
-.symbolButton{
+.symbolButton {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     border-radius: 10px;
@@ -71,17 +75,16 @@ p {
     width: 50px;
     height: 50px;
     font-size: 18px;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
-.some{
+.some {
     overflow: hidden;
 }
 
-.domino_img{
+.domino_img {
     width: 700px;
     height: 200px;
     margin-left: 200px;
-
-    border-radius: 0px;
+    border-radius: 0;
 }

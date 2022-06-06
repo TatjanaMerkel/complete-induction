@@ -1,13 +1,12 @@
 .tableOfContent {
-    position: fixed;
-    top: 14%;
-    right: 1em;
-    max-width: 18%;
     color: white;
-    font-size: 22px;
     background-color: #2e3642;
     border-radius: 30px;
     border: 2px solid black;
+    position: fixed;
+    right: 16px;
+    margin: 60px 0;
+    max-width: 220px;
 }
 
 .tableOfContent h2 {
@@ -29,7 +28,7 @@
 }
 
 .tableOfContent a {
-    font-size: 18px;
+    font-size: 15px;
     display: block;
     padding: 0 8px;
     margin: 0.1em 0.1em;
