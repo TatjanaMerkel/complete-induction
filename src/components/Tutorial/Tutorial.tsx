@@ -1,121 +1,175 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import '../Home/Home.css';
 import './Tutorial.css';
-import Navbar from "../Navbar/Navbar";
-import TableOfContents from '../TableOfContents/TableOfContents';
-import { Heading } from "../TableOfContents/TableOfContents";
-import { MathJax, MathJaxContext } from "better-react-mathjax";
-import TutorialButton from '../TutorialButton/TutorialButton';
-import { IoArrowBack } from "react-icons/io5";
-import { IoArrowForward } from "react-icons/io5";
-import { useNavigate } from 'react-router';
+import TutorialCard from './TutorialCard/TutorialCard';
+import TableOfContents from './TableOfContents/TableOfContents';
+import {Heading} from "./TableOfContents/TableOfContents";
 import BackBar from "./../BackButton/BackBar";
+import {useNavigate} from 'react-router';
+import {MathJax} from "better-react-mathjax";
+
 
 function Tutorial() {
-    const [childData, setState] = useState(false);
 
+    const naturalNumber = `\\(\\mathbb{N}\\)`;
+    const naturalNumberNull = `\\(\\mathbb{N}_0\\) `;
+    const naturalNumberAmount = `\\(\\mathbb{N}=\\{1, 2, 3, ... \\}\\)`;
+    const nNull = `\\(n_0 \\) `;
+    const n = `\\(n \\)`;
 
-    function handleCallback(childData: boolean) {
-        setState(childData)
+    let navigate = useNavigate();
+
+    //functions to set value of each input field
+    const [value, setValue] = useState('');
+    const [value2, setValue2] = useState('');
+
+    let buttonIndex: any;
+
+    //function that saves which input field is currently selected
+    function setButtonIndex(index: any) {
+        buttonIndex = index;
     }
 
-    const DummyText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-    
-    //variable for navigation function
-    let navigate = useNavigate();
+    //function that adds latex code to the last selected input field
+    function changing(symbol: any) {
+        if (buttonIndex === 1) {
+            setValue(`${value} ${symbol}`)
+        }
+        if (buttonIndex === 2) {
+            setValue2(`${value2} ${symbol}`)
+        }
+    }
 
     return (
         <div>
-            <Navbar parentCallback={handleCallback}/>
             <BackBar texts={["Home"]}/>
-            <TutorialButton onClick={() => {{navigate("/");}}}
-            type="button"
-            buttonStyle="btn--primary--solid"
-            buttonSize="btn--medium"
-            buttonPosition="btn--left"><IoArrowBack size='2em'></IoArrowBack>
-            </TutorialButton>
-            <TutorialButton onClick={() => {{navigate("/tutorial_2");}}}
-            type="button"
-            buttonStyle="btn--primary--solid"
-            buttonSize="btn--medium"
-            buttonPosition="btn--right"><IoArrowForward size='2em'></IoArrowForward>
-            </TutorialButton>
+            <TutorialCard>
+                <div className="cardTitle">
+                    <Heading as="h2">Was ist vollständige Induktion?</Heading>
+                </div>
 
-            <div className="container">
-                <article>
-                    <main>
-                        <h1>Vollständige Induktion: Was ist das?</h1>
-                        <p>"Die vollständige Induktion ist ein Beweisverfahren, mit dem du Aussagen für die ganzen natürlichen Zahlen beweisen kannst. Das funktioniert wie bei einer Reihe von Dominosteinen. Du schubst den ersten Stein an und musst dann nur noch dafür sorgen, dass der jeweils nächste Stein umgestoßen wird."</p>
-                        <img className="domino_img" src={require("./../../files/icons/Domino.png")}></img>
-                        <p>"Die vollständige Induktion besteht aus folgenden Schritten: <br/>
-                            1. Der Induktionsanfang: Hier wird gezeigt, dass die Aussage für den Startwert gilt. <br/>
-                            2. Die Induktionsvorraussetzung: Nun gehst du davon aus, dass die Aussage für ein beliebiges n gilt. <br/>
-                            3. Die Induktionsbehauptung: Jetzt gehst du davon aus, dass es auch für jedes beliebige n+1 gilt. (n -&gt n+1)"<br/>
-                            4. Der Induktionsschluss: Schlussendlich wird mit Hilfe der Induktionsvoraussetzung gezeigt, dass es auch für n+1 gilt.<br/>
-                            <br/>
-                            Den Induktionsbeweis kannst du für den Beweis verschiedenster Aussagen benutzen. Darunter Summengleichungen, Fakultäten, Teilbarkeitsaussagen, Ungleichungen und vieles mehr. </p>
-                        <div>
-                            <MathJax hideUntilTypeset={"first"}>
-                                {`Dies ist eine Testaufgabe um Aufgaben auszuprobieren. Beweise das folgendes gilt: \\(x\\) or \\(\\frac{25x}{10} = 2^{10}\\), beweise anschließend,
+                <p>
+                    Die vollständige Induktion ist ein Beweisschema, nach der eine Aussage <b id="colorText">für alle
+                    natürlichen Zahlen </b> bewiesen wird.
+                    Die natürlichen Zahlen {naturalNumber} sind dabei die
+                    Menge {naturalNumberAmount}. {naturalNumberNull}
+                    beschreibt alle natürlichen Zahlen inklusive der 0.
+                </p>
+                <br/>
+                <p>
+                    Da es unendlich viele Zahlen gibt und deine Lebenszeit begrenzt ist, können nicht alle Zahlen
+                    durchprobiert werden.
+                    Stattdessen wird ein <b id="colorText">Domino-Prinzip </b> verwendet.
+                    <br/>
+                    <img className="picture" src={require('../../../src/assets/DominoEffect.jpg')} alt="DominoEffekt"/>
+                </p>
+
+                <p>
+                    Es wird gedanklich den ersten Dominostein einer Dominokette umgestoßen. Der erste
+                    Dominostein <b id="colorText">{nNull}</b>
+                    fällt um und stößt den nächten Dominostein, seinen <b id="colorText">Nachfolger (n+1)</b> in der Kette um. Der (n+1)-te
+                    Stein
+                    stößt wiederum seinen Nachfolger (n+2) um und immer so weiter. Am Ende werden alle Dominosteine
+                    fallen.
+                    Der Fall eines Steins entspricht im Kontext eines <b id="colorText">Induktionsbeweises</b> dem Testen der Behauptung für
+                    ein {n}.
+                </p>
+                <br/>
+               
+
+                <Heading as="h2">Von Dominoketten und der Unendlichkeit</Heading>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
+                    voluptates assumenda eos accusamus eius magnam similique aspernatur
+                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
+                    laudantium dignissimos!
+                </p>
+
+                <Heading as="h2">Das Induktionsrezept</Heading>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
+                    voluptates assumenda eos accusamus eius magnam similique aspernatur
+                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
+                    laudantium dignissimos!
+                </p>
+
+                <Heading as="h2">Interaktive Beispiel</Heading>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit,
+                    voluptates assumenda eos accusamus eius magnam similique aspernatur
+                    incidunt nulla cum, libero odio rerum ea quibusdam esse asperiores
+                    laudantium dignissimos!
+                </p>
+
+                <div>
+                    <MathJax hideUntilTypeset={"first"}>
+                        {`Dies ist eine Testaufgabe um Aufgaben auszuprobieren. Beweise das folgendes gilt: \\(x\\) or \\(\\frac{25x}{10} = 2^{10}\\), beweise anschließend,
                                 dass auch folgendes gilt:
                                 \\[\\sum_{n = 100}^{1000}\\left(\\frac{10\\sqrt{n}}{n}\\right)= 4^{7} +28*\\sqrt{5}\\]
                                 Beweise schlussendlich dass gilt:`}
-                            </MathJax>
+                        <input value={value} onClick={() => setButtonIndex(1)}
+                               onChange={(event) => setValue(event.target.value)}/>
+                        <input value={value2} onClick={() => setButtonIndex(2)}
+                               onChange={(event) => setValue2(event.target.value)}/>
+                        <div className="symbolBackground">
+                            <button className="symbolButton"
+                                    onClick={() => changing(`\\sum_{n = 1}^{k}`)}>
+                                <img src={require("./../../files/icons/sum-button.png")} style={{margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                    onClick={() => changing(`\\prod_{i = 0}^{n}`)}>
+                                <img src={require("./../../files/icons/mult-button.png")} style={{margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                    onClick={() => changing(`\\frac{n}{k}`)}>
+                                <img src={require("./../../files/icons/fraction-button.png")} style={{margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                    onClick={() => changing(`x^{n}`)}>
+                                <img src={require("./../../files/icons/exponent-button.png")} style={{margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                    onClick={() => changing(`\\left(x\\right)`)}>
+                                <img src={require("./../../files/icons/braket-button.png")} style={{margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                    onClick={() => changing(`\\sqrt{}`)}>
+                                <img src={require("./../../files/icons/root-button.png")} style={{margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                    onClick={() => changing(`\\sqrt[2]{}`)}>
+                                <img src={require("./../../files/icons/root-button2.png")} style={{margin: 0}}/>
+                            </button>
+                            <button className="symbolButton"
+                                    onClick={() => changing(`\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}`)}>
+                                <img src={require("./../../files/icons/matrix-button.png")} style={{margin: 0}}/>
+                            </button>
                         </div>
-                        
-                        <p>{DummyText}</p>
-                        <Heading as="h2">The introduction</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <Heading as="h2">How to get started</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <Heading as="h2">Advanced usage</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <Heading as="h3">Using upside-down</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <Heading as="h3">Easter eggs</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <Heading as="h2">Contributing</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <Heading as="h3">Your first pull request</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <Heading as="h3">Governance</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <Heading as="h2">FAQ</Heading>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                        <p>{DummyText}</p>
-                    </main>
-                </article>
-            </div>
-            <div className="mainTable">
+                    </MathJax>
+                    <MathJax>{`An example is the equation $$${value} + ${value2}$$`}</MathJax>
+                </div>
+                <MathJax hideUntilTypeset={"first"}>
+                    {`Dies ist eine Testaufgabe um Aufgaben auszuprobieren. Beweise das folgendes gilt: \\(x\\) or \\(\\frac{25x}{10} = 2^{10}\\), beweise anschließend,
+                                dass auch folgendes gilt:
+                                \\[\\sum_{n = 100}^{1000}\\left(\\frac{10\\sqrt{n}}{n}\\right)= 4^{7} +28*\\sqrt{5}\\]
+                                Beweise schlussendlich dass gilt:`}
+                </MathJax>
+            </TutorialCard>
             <TableOfContents/>
-            
-            </div>
+
+            {/*<button onClick={() => {*/}
+            {/*    navigate("/")*/}
+            {/*}}*/}
+            {/*        className="btn previous round">&#8250; </button>*/}
+            {/*<button*/}
+            {/*    onClick={() => {*/}
+            {/*        navigate("/")*/}
+            {/*    }}*/}
+            {/*    className="btn next round">&#8249; </button>*/}
         </div>
-    );
+    )
+        ;
 }
 
-export default Tutorial;
+export default Tutorial
+;
