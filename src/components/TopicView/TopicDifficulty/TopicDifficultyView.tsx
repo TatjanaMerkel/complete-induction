@@ -53,7 +53,6 @@ function TopicDifficultyView() {
     }
     return (
         <div>
-            <Navbar parentCallback ={handleCallback}/>
             <BackBar texts={["Home", "Topics"]}/>
             <div>
                 <TopicDifficultyWindow text={getTextById(parseInt(page_id))} icon={require("./../../../files/icons/"+getImgById(parseInt(page_id)))}/>
