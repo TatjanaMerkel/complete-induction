@@ -10,10 +10,10 @@ function Tutorial() {
 
     let navigate = useNavigate();
 
-
-    const title: string = 'Was ist vollständige Induktion?';
-    const htmlText_1 = `
-    <Latex>
+    const pageContent = [
+        {
+            titlePage1: 'Was ist vollständige Induktion?', contentPage1: `
+         <Latex>
         <p>
             Die vollständige Induktion ist ein Beweisschema, nach der eine Aussage <b id="colorText">für alle
             natürlichen Zahlen </b> bewiesen wird. Die natürlichen Zahlen $\\mathbb{N}$ sind dabei die Menge 
@@ -25,11 +25,8 @@ function Tutorial() {
             durchprobiert werden. Stattdessen wird ein <b id="colorText">Domino-Prinzip </b> verwendet.
         <br/>
         </p>
-    </Latex>
-    `;
-
-    const htmlText_2 = `
-    <Latex>  
+    </Latex>`,
+            contentPage1_2: ` <Latex>  
         <p>
             Es wird gedanklich den ersten Dominostein einer Dominokette umgestoßen. Der erste Dominostein 
             <b id="colorText">$n_0$</b> fällt um und stößt den nächten Dominostein, seinen <b id="colorText">Nachfolger 
@@ -39,18 +36,41 @@ function Tutorial() {
              Am Ende werden alle Dominosteine fallen. Der Fall eines Steins entspricht im Kontext eines <b id="colorText">
              Induktionsbeweises</b> dem Testen der Behauptung für ein $n$. </p>
         </p>
-    </Latex>`;
+    </Latex>`
+        },
+
+    ]
+
+    const pageContentJSX = pageContent.map(pageContent => {
+            return (
+                <div>
+                    <TutorialCard title={pageContent.titlePage1} text_1={pageContent.contentPage1}
+                                  text_2={pageContent.contentPage1_2}/>
+                </div>
+            )
+        }
+    )
+    
+    const pageTitleJSX = pageContent.map(pageContent => {
+            return (
+                <div>
+                    <TableOfContents title={pageContent.titlePage1}/>
+                </div>
+            )
+        }
+    )
 
 
     return (
         <div>
             <BackBar texts={["Home"]}/>
             <div className="container_1">
+
                 <div className="item_1">
-                    <TutorialCard title={title} text_1={htmlText_1} text_2={htmlText_2}/>
+                    {pageContentJSX}
                 </div>
                 <div className="item_2">
-                    <TableOfContents title={title}/>
+                    {pageTitleJSX}
                 </div>
             </div>
             <div className="container_2">
