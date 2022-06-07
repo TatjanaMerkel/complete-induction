@@ -4,9 +4,6 @@
     border-radius: 30px;
     border: 2px solid black;
     position: fixed;
-    right: 16px;
-    margin: 60px 0;
-    max-width: 220px;
 }
 
 .tableOfContent h2 {
@@ -18,7 +15,7 @@
 .tableOfContent ul {
     list-style-position: inside;
     margin: 1px;
-    padding: 2px;
+    padding: 20px;
 }
 
 .tableOfContent li {

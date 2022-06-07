@@ -1,14 +1,37 @@
-.container {
+/* FLEXBOX */
+.container_1 {
     display: flex;
+    margin: 60px;
+    gap: 10px;
 }
 
-.cardTitle {
-    font-size: 22px;
-    text-align: center;
-    margin-bottom: 2em;
+.container_2 {
+    display: flex;
+    margin-bottom: 5%;
 }
 
-.picture {
+.item_1 {
+    max-width: 85%;
+}
+
+.item_2 {
+
+}
+
+.item_3 {
+    flex-grow: 2;
+    margin: 0 15%;
+}
+
+.item_4 {
+    flex-grow: 2;
+    margin: 0 20%;
+}
+
+
+/* IMAGE */
+
+.domino-image {
     border-radius: 5%;
     width: 500px;
     height: 300px;
@@ -17,14 +40,14 @@
     border: 5px solid #ffffff;
 }
 
+
 #colorText {
     color: #29b6f6
 }
 
-p {
-    font-size: 20px;
-    line-height: 1.6;
-}
+
+
+/* PAGE BUTTON */
 
 .btn {
     position: relative;
@@ -33,6 +56,9 @@ p {
     width: 60px;
     height: 60px;
     font-size: 2em;
+    background-color: #29b6f6;
+    color: white;
+    border-radius: 50%;
 }
 
 .btn:hover {
@@ -40,20 +66,8 @@ p {
     color: black;
 }
 
-.previous {
-    background-color: #29b6f6;
-    color: white;
-    border-radius: 50%;
-    left: 10%;
-    margin-bottom: 50px;
-}
 
-.next {
-    background-color: #29b6f6;
-    color: white;
-    border-radius: 50%;
-    left: 75%;
-}
+/* MATH BUTTON */
 
 .symbolBackground {
     background-color: #9d52ff;
@@ -82,9 +96,6 @@ p {
     overflow: hidden;
 }
 
-.domino_img {
-    width: 700px;
-    height: 200px;
-    margin-left: 200px;
-    border-radius: 0;
-}
+
+
+

@@ -1,13 +1,17 @@
-import {ReactChild, ReactFragment, ReactPortal} from 'react';
 import './TutorialCard.css';
 
-function TutorialCard(props: { children: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined; }) {
+function TutorialCard(props: { title: string, text_1: string, text_2: string }) {
+
+
 
     return (
         <div className="card">
-            <div className="card-body">
-                {props.children}
-            </div>
+            <h2 className="card-title">
+                {props.title}
+            </h2>
+            <div className="card-body" dangerouslySetInnerHTML={{ __html: props.text_1}} />
+            <img className="domino-image" src={require('../../../assets/DominoEffect.jpg')} alt="DominoEffekt"/>
+            <div className="card-body" dangerouslySetInnerHTML={{ __html: props.text_2}} />
         </div>
 
     );
