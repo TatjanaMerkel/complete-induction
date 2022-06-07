@@ -11,7 +11,7 @@
 }
 
 .item_1 {
-    max-width: 85%;
+    width: 85%;
 }
 
 .item_2 {
@@ -30,7 +30,6 @@
 
 
 /* IMAGE */
-
 .domino-image {
     border-radius: 5%;
     width: 500px;
@@ -40,6 +39,9 @@
     border: 5px solid #ffffff;
 }
 
+li {
+    list-style-type: none;
+}
 
 #colorText {
     color: #29b6f6

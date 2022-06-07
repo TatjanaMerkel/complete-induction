@@ -32,15 +32,27 @@ function Tutorial() {
             <b id="colorText">$n_0$</b> fällt um und stößt den nächten Dominostein, seinen <b id="colorText">Nachfolger 
             (n+1)</b> in der Kette um. Der (n+1)-te Stein stößt wiederum seinen Nachfolger (n+2) um und immer so weiter.
              <p>
-             <br>
+             <br/>
              Am Ende werden alle Dominosteine fallen. Der Fall eines Steins entspricht im Kontext eines <b id="colorText">
              Induktionsbeweises</b> dem Testen der Behauptung für ein $n$. </p>
             </p>
             </Latex>`
         },
         {
-            titlePage: 'next',
-            contentPage1: '',
+            titlePage: 'Das Induktionsrezept',
+            contentPage1: `
+            <Latex>
+                <p>
+                Der Beweis, dass eine Aussage für alle natürliche Zahlen ab $n_0$ gilt, wird in drei Etappen durchgeführt:
+                <br/>
+                <ol>
+                    <li>1. Induktionsanfang (IA):</li>
+                    <li>2. Induktionsvoraussetzung (IV):</li>
+                    <li>3. Induktionsschritt: (IS)</li>
+                </ol>
+                </p>
+            </Latex>
+            `,
             contentPage2: ''
         }
     ]);
@@ -51,7 +63,7 @@ function Tutorial() {
             <div className="container_1">
 
                 <div className="item_1">
-                    <TutorialCard title={pageContent[pageNumber].titlePage}
+                    <TutorialCard page = {pageNumber} title={pageContent[pageNumber].titlePage}
                                   text_1={pageContent[pageNumber].contentPage1}
                                   text_2={pageContent[pageNumber].contentPage2}/>
                 </div>

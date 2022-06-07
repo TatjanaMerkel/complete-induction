@@ -1,6 +1,9 @@
 import './TutorialCard.css';
 
-function TutorialCard(props: { title: string, text_1: string, text_2: string }) {
+function TutorialCard(props: { page: number, title: string, text_1: string, text_2: string }) {
+
+
+
 
 
 
@@ -10,7 +13,7 @@ function TutorialCard(props: { title: string, text_1: string, text_2: string }) 
                 {props.title}
             </h2>
             <div className="card-body" dangerouslySetInnerHTML={{ __html: props.text_1}} />
-            <img className="domino-image" src={require('../../../assets/DominoEffect.jpg')} alt="DominoEffekt"/>
+            {props.page !== 1 ? <img className="domino-image" src={require('../../../assets/DominoEffect.jpg')} alt="DominoEffekt"/>:''}
             <div className="card-body" dangerouslySetInnerHTML={{ __html: props.text_2}} />
         </div>
 
