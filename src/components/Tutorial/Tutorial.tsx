@@ -3,7 +3,7 @@ import '../Home/Home.css';
 import './Tutorial.css';
 import TutorialCard from './TutorialCard/TutorialCard';
 import TableOfContents from './TableOfContents/TableOfContents';
-import BackBar from "./../BackButton/BackBar";
+import BackBar from './../BackButton/BackBar';
 
 function Tutorial() {
 
@@ -12,7 +12,7 @@ function Tutorial() {
         {
             titlePage: 'Was ist vollständige Induktion?',
             contentPage1: ` 
-           <Latex>
+           <div>
                 <p>
                 Die vollständige Induktion ist ein Beweisschema, nach der eine Aussage <b id="colorText">für alle
                 natürlichen Zahlen </b> bewiesen wird. Die natürlichen Zahlen $\\mathbb{N}$ sind dabei die Menge 
@@ -24,9 +24,9 @@ function Tutorial() {
                 durchprobiert werden. Stattdessen wird ein <b id="colorText">Domino-Prinzip </b> verwendet.
                 <br/>
                 </p>
-            </Latex>`,
+            </div>`,
             contentPage2: ` 
-            <Latex>  
+            <div>  
             <p>
             Es wird gedanklich den ersten Dominostein einer Dominokette umgestoßen. Der erste Dominostein 
             <b id="colorText">$n_0$</b> fällt um und stößt den nächten Dominostein, seinen <b id="colorText">Nachfolger 
@@ -36,12 +36,12 @@ function Tutorial() {
              Am Ende werden alle Dominosteine fallen. Der Fall eines Steins entspricht im Kontext eines <b id="colorText">
              Induktionsbeweises</b> dem Testen der Behauptung für ein $n$. </p>
             </p>
-            </Latex>`
+            </div>`
         },
         {
             titlePage: 'Das Induktionsrezept',
             contentPage1: `
-            <Latex>
+            <div>
                 <p>
                 Der Beweis, dass eine Aussage für alle natürliche Zahlen ab $n_0$ gilt, wird in drei Etappen durchgeführt:
                 <br/>
@@ -51,7 +51,7 @@ function Tutorial() {
                     <li>3. Induktionsschritt: (IS)</li>
                 </ol>
                 </p>
-            </Latex>
+            </div>
             `,
             contentPage2: ''
         }
@@ -61,9 +61,8 @@ function Tutorial() {
         <div>
             <BackBar texts={["Home"]}/>
             <div className="container_1">
-
                 <div className="item_1">
-                    <TutorialCard page = {pageNumber} title={pageContent[pageNumber].titlePage}
+                    <TutorialCard page={pageNumber} title={pageContent[pageNumber].titlePage}
                                   text_1={pageContent[pageNumber].contentPage1}
                                   text_2={pageContent[pageNumber].contentPage2}/>
                 </div>
