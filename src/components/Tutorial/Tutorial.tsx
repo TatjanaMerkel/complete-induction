@@ -45,12 +45,13 @@ function Tutorial() {
             solution: ''
         },
         {
-            titlePage: 'Das Induktionsrezept',
+            titlePage: 'Das Induktionskonzept',
             contentPage1: `
             <div>
                 <p>
                 Der Beweis, dass eine Aussage für alle natürliche Zahlen ab $n_0$ gilt, wird in drei Etappen durchgeführt:
                 <br/>
+                 <br/>
                 <ol>
                     <li id="heading">1. Induktionsanfang (IA): </li>
                     <li> Im Induktionsanfang wird eine Aussage A($n_0$) mit einem <b id="markBlue">Startwert</b> getestet, 
@@ -59,6 +60,7 @@ function Tutorial() {
                          oder <b id="markGreen">$n_0=1$</b>  und für die Aussage der Form <b id="markGreen">
                          "Alle natürlichen Zahlen ab m"</b> ist m der Startwert.
                      </li>
+                      <br/>
                     <li id="heading">2. Induktionsvoraussetzung (IV):</li>
                     <li> In der Induktionsvoraussetzung ist die Voraussetzung damit der Beweis gelingen kann. Dabei wird
                     eine <b id="markBlue">Behauptung</b> aufgestellt, dass die zu beweisende Aussage für <b id="markBlue">
@@ -68,6 +70,7 @@ function Tutorial() {
                     Die Induktionsbehauptung lautet: <b id="markGreen">"Wenn A($n_k$) für ein $n_k$ gilt, dann gilt sie 
                     auch für den Nachfolger $n_k+1$". </b>
                     </li>
+                     <br/>
                     <li id="heading">3. Induktionsschritt: (IS)</li>
                     <li>Im Induktionsschritt wird einfach die <b id="markBlue">Induktionsbehauptung bewiesen </b>. Gilt die Aussage für eine beliebige Zahl $n_k$,
                      so gilt sie auch für die Zahl eins größer. Wenn die Aussage A für einen Startwert $n_0 \\in \\mathbb{N}$ gilt und 
@@ -88,7 +91,7 @@ function Tutorial() {
             contentPage2: '<b>Beweise die Aussage:</b>',
             task: `
                     \\[ A(n): \\sum_{k=1}^n = \\frac{n \\cdot (n + 1)}{2} \\] gilt für 
-                    alle $n \\in \\mathbb{N}$, also <b id="markGreen">für alle natürlichen Zahlen</b>.
+                    alle $n \\in \\mathbb{N}$, also für alle natürlichen Zahlen <b id="markGreen">für alle natürlichen Zahlen</b>.
                    `,
             solution: `
                         <bold id="heading">1. Induktionsanfang</bold> $A(n_0)$
