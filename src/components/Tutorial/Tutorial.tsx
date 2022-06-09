@@ -91,13 +91,13 @@ function Tutorial() {
             contentPage2: '<b>Beweise die Aussage:</b>',
             task: `
                     \\[ A(n): \\sum_{k=1}^n = \\frac{n \\cdot (n + 1)}{2} \\] gilt für 
-                    alle $n \\in \\mathbb{N}$, also für alle natürlichen Zahlen <b id="markGreen">für alle natürlichen Zahlen</b>.
+                    alle $n \\in \\mathbb{N}$, also <b id="markGreen">für alle natürlichen Zahlen</b>.
                    `,
             solution: `
                         <bold id="heading">1. Induktionsanfang</bold> $A(n_0)$
                         <br/>
                         Im Induktionsanfang wird gezeigt, dass die Behauptung für einen Startwert $n_0$ gilt.
-                        Die Summenformel beginnt mit dem Startwert $k = 1$, so wählen wir $n_0 = 1$.
+                        Die Summenformel beginnt mit dem Startwert $k = 1$, so wählen wir $ {\\color{orange}n_0 = 1}$.
                         Diesen Startwert setzen wir für $A(n)$ ein und überprüfen, ob dasselbe Ergebnis
                         auf beiden Seiten herauskommt.
                         <br/>
