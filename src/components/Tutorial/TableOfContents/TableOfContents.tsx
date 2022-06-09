@@ -2,12 +2,17 @@ import React from "react";
 import './TableOfContents.css';
 
 
-function TableOfContents(props: { title: string }) {
+function TableOfContents() {
 
     return (
         <nav className="tableOfContent">
             <h2>Tutorial</h2>
-            <ul>{props.title}</ul>
+            <ul>
+                <li>Was ist vollständige Induktion?</li>
+                <li>Das Induktionskonzept</li>
+                <li>Der Klassiker der Induktionsbeweise</li>
+            </ul>
+
         </nav>
     );
 }
