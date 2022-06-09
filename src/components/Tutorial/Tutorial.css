@@ -1,11 +1,44 @@
-
-.cardTitle {
-    font-size: 22px;
-    text-align: center;
-    margin-bottom: 2em;
+/* FLEXBOX */
+.container_1 {
+    border: 1px solid black;
+    display: flex;
+    margin: 60px;
+    gap: 10px;
 }
 
-.picture {
+.container_2 {
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.item_1 {
+    border: 1px solid black;
+    width: 85%;
+}
+
+.item_2 {
+    border: 1px solid black;
+
+}
+
+.item_3 {
+    border: 1px solid black;
+    flex-grow: 2;
+    margin: 0 15%;
+    width: 50%;
+}
+
+.item_4 {
+    border: 1px solid black;
+    flex-grow: 2;
+    margin: 0 20%;
+    width: 50%;
+}
+
+
+/* IMAGE */
+.domino-image {
     border-radius: 5%;
     width: 500px;
     height: 300px;
@@ -14,52 +47,71 @@
     border: 5px solid #ffffff;
 }
 
-#colorText {
-    color:  #29b6f6
+li {
+    list-style-type: none;
 }
 
-p {
-    font-size: 20px;
-    line-height: 1.6;
+#markBlue {
+    color: #29b6f6
 }
+#markGreen {
+    font-weight: normal;
+    color: #2ECC71
+}
+
+#example {
+    font-size: 25px;
+    color: #2ECC71
+}
+
+#markOrange {
+    font-weight: normal;
+    color: #f57e12
+}
+
+#heading {
+    font-weight: bold;
+    font-size: 24px;
+    color: #9B59B6;
+    margin: 5px;
+}
+
+
+
+
+
+/* PAGE BUTTON */
 
 .btn {
-    position: absolute;
+    position: relative;
     display: inline-block;
     padding: 8px 16px;
+    width: 60px;
+    height: 60px;
     font-size: 2em;
-    bottom: 12px;
+    background-color: #29b6f6;
+    color: white;
+    border-radius: 50%;
 }
+
 
 .btn:hover {
     background-color: #ddd;
     color: black;
 }
 
-.previous {
-    background-color: #29b6f6;
-    color: white;
-    right: 21%;
-    border-radius: 50%;
 
-}
+/* MATH BUTTON */
 
-.next {
-    background-color: #29b6f6;
-    color: white;
-    left: 6%;
-    border-radius: 50%;
-}
-
-.symbolBackground{
+.symbolBackground {
     background-color: #9d52ff;
     padding: 16px;
     border-radius: 8px;
-    margin-right:584px;
-    margin-left:700px;
+    margin-right: 584px;
+    margin-left: 700px;
 }
 
-.symbolButton{
+.symbolButton {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     border-radius: 10px;
@@ -71,17 +123,13 @@ p {
     width: 50px;
     height: 50px;
     font-size: 18px;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
-.some{
+.some {
     overflow: hidden;
 }
 
-.domino_img{
-    width: 700px;
-    height: 200px;
-    margin-left: 200px;
 
-    border-radius: 0px;
-}
+
+

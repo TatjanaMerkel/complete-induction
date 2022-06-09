@@ -1,19 +1,27 @@
 .card {
-    width: 75%;
     color: white;
     font-size: 1em;
     background-color: #2e3642;
     border-radius: 30px;
     border: 2px solid black;
-    position: absolute;
-    top: 16%;
-    left: 50%;
-    transform: translate(-60%, 0)
+}
+
+.card-title {
+    padding: 20px;
+    font-size: 45px;
+    text-align: center;
 }
 
 .card-body {
-    padding: 20px;
+    font-size: 22px;
+    padding: 22px;
+    line-height: 1.6;
+}
 
+.task {
+    text-align: center;
+    border: white 1px solid;
+    margin: 0 10%;
 }
 
 

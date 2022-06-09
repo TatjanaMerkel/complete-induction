@@ -1,13 +1,10 @@
 .tableOfContent {
-    position: fixed;
-    top: 14%;
-    right: 1em;
-    max-width: 18%;
     color: white;
-    font-size: 22px;
     background-color: #2e3642;
     border-radius: 30px;
     border: 2px solid black;
+    position: fixed;
+    width: 15%
 }
 
 .tableOfContent h2 {
@@ -18,18 +15,18 @@
 
 .tableOfContent ul {
     list-style-position: inside;
-    margin: 1px;
-    padding: 2px;
+    margin: 4px 0;
+    padding: 3px 10px;
 }
 
 .tableOfContent li {
     list-style-type: circle;
-    margin: 0;
-    padding: 0;
+    font-size: 18px;
+    margin: 4px 8px;
 }
 
 .tableOfContent a {
-    font-size: 18px;
+    font-size: 15px;
     display: block;
     padding: 0 8px;
     margin: 0.1em 0.1em;
