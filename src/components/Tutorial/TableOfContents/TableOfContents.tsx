@@ -2,7 +2,7 @@ import React from "react";
 import './TableOfContents.css';
 
 
-function TableOfContents() {
+function TableOfContents(props: { pageNumber: number}) {
 
     return (
         <nav className="tableOfContent">

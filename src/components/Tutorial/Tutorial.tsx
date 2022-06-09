@@ -9,7 +9,7 @@ import BackBar from './../BackButton/BackBar';
 function Tutorial() {
 
     const min = 0;
-    const max = 4;
+    const max = 1;
 
     const [pageNumber, setPageNumber] = useState(0);
     const [pageContent,] = useState([
@@ -150,7 +150,7 @@ function Tutorial() {
                     />
                 </div>
                 <div className="item_2">
-                    <TableOfContents/>
+                    <TableOfContents pageNumber={pageNumber}/>
                 </div>
             </div>
             <div className="container_2">
@@ -165,7 +165,7 @@ function Tutorial() {
                 <div className="item_4">
                     {pageNumber <= max ? <div>
                         <button className="btn round"
-                                onClick={() => setPageNumber(pageNumber + 1)}
+                                onClick={() => {setPageNumber(pageNumber + 1); console.log(pageNumber)}}
                         >&#8250; </button>
                     </div> : pageNumber === max}
                 </div>
