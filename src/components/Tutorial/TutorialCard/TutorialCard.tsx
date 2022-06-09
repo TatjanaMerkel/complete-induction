@@ -12,7 +12,7 @@ function TutorialCard(props: { page: number, title: string, text_1: string, text
                 {props.title}
             </h2>
             <MathJax className="card-body" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(props.text_1)}}/>
-            {props.page !== 1 ? <img className="domino-image" src={require('../../../assets/DominoEffect.jpg')}
+            {props.page === 0 ? <img className="domino-image" src={require('../../../assets/DominoEffect.jpg')}
                                      alt="DominoEffekt"/> : ''}
             <MathJax className="card-body" dangerouslySetInnerHTML={{__html: props.text_2}}/>
         </div>
