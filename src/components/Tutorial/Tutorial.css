@@ -55,7 +55,18 @@ li {
     color: #29b6f6
 }
 #markGreen {
+    font-weight: normal;
     color: #2ECC71
+}
+
+#example {
+    font-size: 25px;
+    color: #2ECC71
+}
+
+#markOrange {
+    font-weight: normal;
+    color: #f57e12
 }
 
 #heading {
@@ -64,6 +75,8 @@ li {
     color: #9B59B6;
     margin: 5px;
 }
+
+
 
 
 

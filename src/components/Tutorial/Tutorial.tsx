@@ -5,6 +5,7 @@ import TutorialCard from './TutorialCard/TutorialCard';
 import TableOfContents from './TableOfContents/TableOfContents';
 import BackBar from './../BackButton/BackBar';
 
+
 function Tutorial() {
 
     const min = 0;
@@ -39,7 +40,9 @@ function Tutorial() {
              Am Ende werden alle Dominosteine fallen. Der Fall eines Steins entspricht im Kontext eines <b id="markBlue">
              Induktionsbeweises</b> dem Testen der Behauptung für ein $n$. </p>
             </p>
-            </div>`
+            </div>`,
+            task: '',
+            solution: ''
         },
         {
             titlePage: 'Das Induktionsrezept',
@@ -50,7 +53,7 @@ function Tutorial() {
                 <br/>
                 <ol>
                     <li id="heading">1. Induktionsanfang (IA): </li>
-                    <li>Im Induktionsanfang wird eine Aussage A($n_0$) mit einem <b id="markBlue">Startwert</b> getestet, 
+                    <li> Im Induktionsanfang wird eine Aussage A($n_0$) mit einem <b id="markBlue">Startwert</b> getestet, 
                         ob die <b id="markBlue">Aussage wahr</b> ist. In der Regel ist der Startwert vorgegeben, ansonsten
                          wird die kleinste Zahl $n_0$ verwendet. Fast immer ist der Startwert <b id="markGreen">$n_0=0$</b> 
                          oder <b id="markGreen">$n_0=1$</b>  und für die Aussage der Form <b id="markGreen">
@@ -75,9 +78,61 @@ function Tutorial() {
                 </p>
             </div>
             `,
-            contentPage2: ''
+            contentPage2: '',
+            task: '',
+            solution: ''
         },
-        {titlePage: '', contentPage1: '', contentPage2: ''}
+        {
+            titlePage: 'Der Klassiker der Induktionsbeweise',
+            contentPage1: '<b id="example">Beispiel:</b> Gauß\'sche Summenformel ',
+            contentPage2: '<b>Beweise die Aussage:</b>',
+            task: `
+                    \\[ A(n): \\sum_{k=1}^n = \\frac{n \\cdot (n + 1)}{2} \\] gilt für 
+                    alle $n \\in \\mathbb{N}$, also <b id="markGreen">für alle natürlichen Zahlen</b>.
+                   `,
+            solution: `
+                        <bold id="heading">1. Induktionsanfang</bold> $A(n_0)$
+                        <br/>
+                        Im Induktionsanfang wird gezeigt, dass die Behauptung für einen Startwert $n_0$ gilt.
+                        Die Summenformel beginnt mit dem Startwert $k = 1$, so wählen wir $n_0 = 1$.
+                        Diesen Startwert setzen wir für $A(n)$ ein und überprüfen, ob dasselbe Ergebnis
+                        auf beiden Seiten herauskommt.
+                        <br/>
+                        \\[ n_0=1: \\sum_{k=1}^{\\color{orange}1} = \\frac{ {\\color{orange}1} 
+                        \\cdot ({\\color{orange}1} + 1)}{2}  \\] 
+                        
+                         \\[ \\enspace   1 = 1  \\] 
+                         <br/>
+                         <bold id="heading">2. Induktionsvoraussetzung</bold> $A(n)$
+                         <br/>
+                         Die Induktionsvoraussetzung zu formulieren ist überhaupt kein Problem.
+                        Schreibe einfach die Behauptung $A(n)$ ab und setze ein „es existiert (mindestens) eine natürliche Zahl n“ 
+                        in Form von „$ \\exists n \\in \\mathbb{N}$“ davor:
+                         \\[ \\exists n \\in \\mathbb{N}: {\\color{violet}(\\sum_{k=1}^n) = \\frac{n \\cdot (n + 1)}{2}} \\]
+                         
+                         <br/>
+                         <bold id="heading">3. Induktionsschritt</bold> $A(n) \\Longrightarrow A(n+1)$
+                         <br/>
+                         Jedes $n$ in $A(n)$ wird durch $n+1$ ersetzt:
+                          \\[ \\text{Induktionsbehauptung:} \\quad n_0=1: \\sum_{k=1}^{\\color{cyan}n+1} = \\frac{ {\\color{cyan}(n+1)} 
+                        \\cdot ({\\color{cyan}(n+1)} + 1)}{2}  \\] 
+                         <br/>
+                         Als nächstes muss aus $A(n)$ (der Induktionsvoraussetzung) gefolgert werden, dass $A(n+1)$ eine wahre Aussage ist.
+                         Beginne dafür mit der rechten Seite der Summenformel aus der Induktionsbehauptung:
+                         <br/>
+                          \\[  \\sum_{k=1}^{n+1} = \\] 
+                          Das Summenzeichen kann aufgespalten  und die Induktionsvoraussetzung kann wieder gefunden werden:
+                          \\[  \\sum_{k=1}^{n+1} = \\, {\\color{violet}(\\sum_{k=1}^n)} + (n+1) \\]
+                          Ersetze den eingeklammerten Teil also durch die rechte Seite der Induktionsvoraussetzung:
+                          \\[  \\sum_{k=1}^{n+1} = \\, {\\color{violet}\\frac{n \\cdot (n + 1)}{2} } + (n+1) \\qquad \\qquad | \\; \\text{auf einen Nenner bringen} \\] 
+                          \\[   = \\, {\\color{violet}\\frac{n \\cdot (n + 1)}{2} } + \\frac{2 \\cdot (n+1)}{2} \\qquad \\qquad | \\; \\text{gemeinsamer Bruch} \\]
+                          \\[   = \\, \\frac{n \\cdot (n + 1) + 2 \\cdot (n+1)}{2}  \\qquad \\qquad  | \\; (n+1) \\; \\text{ausklammern} \\]
+                          \\[   = \\, \\frac{(n + 1) \\cdot (n+2)}{2} \\qquad \\qquad \\qquad  \\qquad  | \\; (n+1) \\; \\text{umformen} \\]
+                          \\[   = \\, \\frac{(n + 1) \\cdot ((n+1)+1)}{2} _{q.e.d.}     \\qquad \\qquad  \\qquad \\qquad \\qquad  \\qquad \\] 
+                        
+                        
+            `
+        }
     ]);
 
 
@@ -88,7 +143,11 @@ function Tutorial() {
                 <div className="item_1">
                     <TutorialCard page={pageNumber} title={pageContent[pageNumber].titlePage}
                                   text_1={pageContent[pageNumber].contentPage1}
-                                  text_2={pageContent[pageNumber].contentPage2}/>
+                                  text_2={pageContent[pageNumber].contentPage2}
+                                  task={pageContent[pageNumber].task}
+                                  solution={pageContent[pageNumber].solution}
+
+                    />
                 </div>
                 <div className="item_2">
                     <TableOfContents/>

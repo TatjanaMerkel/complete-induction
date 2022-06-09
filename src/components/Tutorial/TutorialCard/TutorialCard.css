@@ -18,4 +18,10 @@
     line-height: 1.6;
 }
 
+.task {
+    text-align: center;
+    border: white 1px solid;
+    margin: 0 10%;
+}
+
 
