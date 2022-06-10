@@ -2,11 +2,7 @@ import './TutorialCard.css';
 import React from "react";
 import {MathJax} from "better-react-mathjax";
 
-
 const DOMPurify = require('dompurify')(window);
-
-
-
 
 function TutorialCard(props: { page: number, title: string, text_1: string, text_2: string, task: string, solution: string }) {
 
