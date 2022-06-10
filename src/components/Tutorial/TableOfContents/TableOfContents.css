@@ -9,25 +9,32 @@
 
 .tableOfContent h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     padding: 12px;
 }
 
-.tableOfContent ul {
+.tableOfContent nav {
     list-style-position: inside;
     margin: 4px 0;
     padding: 3px 10px;
 }
 
+
 .tableOfContent li {
-    list-style-type: circle;
-    font-size: 18px;
-    margin: 4px 8px;
+    list-style: none;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+li:before {
+    content: "·";
+    font-size: 64px;
+    vertical-align: middle;
+    line-height: 20px;
 }
 
 .tableOfContent a {
-    font-size: 15px;
-    display: block;
+    font-size: 20px;
     padding: 0 8px;
     margin: 0.1em 0.1em;
     border-radius: 4px;

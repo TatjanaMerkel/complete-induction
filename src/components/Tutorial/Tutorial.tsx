@@ -12,9 +12,10 @@ function Tutorial() {
     const max = 1;
 
     const [pageNumber, setPageNumber] = useState(0);
+
     const [pageContent,] = useState([
         {
-            titlePage: 'Was ist vollständige Induktion?',
+            titlePage: `<h2 id="initial-header">Was ist vollständige Induktion?</h2>`,
             contentPage1: ` 
            <div>
                 <p>
@@ -45,7 +46,7 @@ function Tutorial() {
             solution: ''
         },
         {
-            titlePage: 'Das Induktionskonzept',
+            titlePage: `<h2 id="second-header">Das Induktionskonzept?</h2>`,
             contentPage1: `
             <div>
                 <p>
@@ -86,7 +87,7 @@ function Tutorial() {
             solution: ''
         },
         {
-            titlePage: 'Der Klassiker der Induktionsbeweise',
+            titlePage: `<h2 id="third-header">Der Klassiker der Induktionsbeweise</h2>`,
             contentPage1: '<b id="example">Beispiel:</b> Gauß\'sche Summenformel ',
             contentPage2: '<b>Beweise die Aussage:</b>',
             task: `
@@ -153,7 +154,7 @@ function Tutorial() {
                     />
                 </div>
                 <div className="item_2">
-                    <TableOfContents pageNumber={pageNumber}/>
+                    <TableOfContents pageNumberToParent ={pageNumber => setPageNumber(pageNumber)} />
                 </div>
             </div>
             <div className="container_2">
@@ -168,7 +169,10 @@ function Tutorial() {
                 <div className="item_4">
                     {pageNumber <= max ? <div>
                         <button className="btn round"
-                                onClick={() => {setPageNumber(pageNumber + 1); console.log(pageNumber)}}
+                                onClick={() => {
+                                    setPageNumber(pageNumber + 1);
+                                    console.log(pageNumber)
+                                }}
                         >&#8250; </button>
                     </div> : pageNumber === max}
                 </div>
