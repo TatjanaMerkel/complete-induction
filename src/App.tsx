@@ -6,6 +6,7 @@ import Tutorial from './components/Tutorial/Tutorial';
 import {MathJaxContext} from "better-react-mathjax";
 import TopicView from './components/TopicView/TopicView';
 import TopicDifficultyView from './components/TopicView/TopicDifficulty/TopicDifficultyView';
+import Test from './components/TopicView/TopicDifficulty/Test';
 import Login from "./components/Login/Login";
 import Navbar from "../src/components/Navbar/Navbar";
 
@@ -45,6 +46,7 @@ function App() {
                         <Route path="/tutorial" element={<Tutorial />} />
                         <Route path="/topics" element={<TopicView />} />
                         <Route path="/topics/topicdifficulty/:id" element={<TopicDifficultyView />} />
+                        <Route path="/topics/topicdifficulty/:id/test" element={<Test />} />
                     </Routes>
                 </Router>
             </MathJaxContext>

@@ -54,7 +54,9 @@ function TopicDifficultyView() {
     return (
         <div>
             <BackBar texts={["Home", "Topics"]}/>
-            <div>
+            <div onClick={() => {
+                        navigate("/topics/topicdifficulty/0/test");
+                    }}>
                 <TopicDifficultyWindow text={getTextById(parseInt(page_id))} icon={require("./../../../files/icons/"+getImgById(parseInt(page_id)))}/>
             </div>
         </div>
