@@ -15,7 +15,7 @@ function Tutorial() {
 
     const [pageContent,] = useState([
         {
-            titlePage: `<h2 id="initial-header">Was ist vollständige Induktion?</h2>`,
+            titlePage: `<h3 id="title">Was ist vollständige Induktion?</h3>`,
             contentPage1: ` 
            <div>
                 <p>
@@ -46,7 +46,7 @@ function Tutorial() {
             solution: ''
         },
         {
-            titlePage: `<h2 id="second-header">Das Induktionskonzept?</h2>`,
+            titlePage: `<h3 id="title">Das Induktionskonzept?</h3>`,
             contentPage1: `
             <div>
                 <p>
@@ -87,7 +87,7 @@ function Tutorial() {
             solution: ''
         },
         {
-            titlePage: `<h2 id="third-header">Der Klassiker der Induktionsbeweise</h2>`,
+            titlePage: `<h3 id="title">Der Klassiker der Induktionsbeweise</h3>`,
             contentPage1: '<b id="example">Beispiel:</b> Gauß\'sche Summenformel ',
             contentPage2: '<b>Beweise die Aussage:</b>',
             task: `
@@ -160,9 +160,9 @@ function Tutorial() {
             <div className="container_2">
                 <div className="item_3">
                     {pageNumber > min ? <div>
-                        <button className="btn round"
+                        <a href="#title"><button className="btn round"
                                 onClick={() => setPageNumber(pageNumber - 1)}
-                        >&#8249; </button>
+                        >&#8249; </button></a>
                     </div> : pageNumber === min}
 
                 </div>
