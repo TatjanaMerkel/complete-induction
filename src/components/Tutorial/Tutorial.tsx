@@ -9,9 +9,9 @@ import BackBar from './../BackButton/BackBar';
 function Tutorial() {
 
     const min = 0;
-    const max = 2;
+    const max = 3;
 
-    const [pageNumber, setPageNumber] = useState(0);
+    const [pageNumber, setPageNumber] = useState(3);
 
     const [pageContent,] = useState([
         {
@@ -157,7 +157,7 @@ function Tutorial() {
                                   solution={pageContent[pageNumber].solution}
                     />
                 </div>
-                <div className="item_2">
+                <div>
                     <TableOfContents pageNumberToParent={pageNumber => setPageNumber(pageNumber)}/>
                 </div>
             </div>

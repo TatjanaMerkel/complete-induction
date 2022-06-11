@@ -74,19 +74,24 @@ input[type=number] {
 }
 
 
-
 /* MATH BUTTON */
 
 .button-row {
     display: flex;
     flex-direction: row;
+    width: 300px;
+    padding: 5px;
 }
 
 .button {
-    border: 1px solid white;
+    border: 2px solid white;
     width: 60px;
     height: 60px;
     border-radius: 10px;
+}
+
+button:hover {
+    border: 3px solid #ff9900;
 }
 
 .buttonIcon {
