@@ -15,7 +15,7 @@ function TutorialCard(props: { page: number, title: string, text_1: string, text
                 <MathJax dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(props.title)}}/>
             </h2>
             <MathJax className="card-body" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(props.text_1)}}/>
-            {props.page === 0 ? <img className="domino-image" src={require('../../../assets/DominoEffect.jpg')}
+            {props.page === 0 ? <img className="domino-image" src={require('../../../assets/img/DominoEffect.jpg')}
                                      alt="DominoEffekt"/> : ''}
             <MathJax className="card-body" dangerouslySetInnerHTML={{__html: props.text_2}}/>
 
@@ -35,7 +35,7 @@ function TutorialCard(props: { page: number, title: string, text_1: string, text
                                     <input className="inputField" type="number" id="quantity" name="quantity"/>
                                 </div>
                                 <div className="flex">
-                                    <img className="symbol" src={require('../../../assets/sum.png')}
+                                    <img className="symbol" src={require('../../../assets/icons/MathsSymbols/sum.png')}
                                          alt="DominoEffekt"/>
                                     <input className="inputField" type="number" id="quantity" name="quantity"/>
                                 </div>
@@ -50,7 +50,7 @@ function TutorialCard(props: { page: number, title: string, text_1: string, text
                     <br/>
                     <div className="button-row">
                         <button className="button" onClick={() => setShowButton(1)}>
-                            <img className="buttonIcon" src={require('../../../assets/sumButton.png')} alt="sum"/>
+                            <img className="buttonIcon" src={require('../../../assets/icons/MathsSymbols/sumButton.png')} alt="sum"/>
                         </button>
                         <button className="button"/>
                         <button className="button"/>

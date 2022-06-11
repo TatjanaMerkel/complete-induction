@@ -28,10 +28,10 @@ function Login(props: { parentCallback: (arg0: boolean) => void; }) {
                 <button className="button-login">Log In</button>
                 <div className="social">
                     <div className="flex-container icon">
-                        <img src={require('../../assets/google-icon.png')} alt="Google"/> Google
+                        <img src={require('../../assets/icons/google-icon.png')} alt="Google"/> Google
                     </div>
                     <div className="fb flex-container icon">
-                        <img src={require('../../assets/facebook-icon.png')} alt="Google"/>Facebook
+                        <img src={require('../../assets/icons/facebook-icon.png')} alt="Google"/>Facebook
                     </div>
                 </div>
             </form>

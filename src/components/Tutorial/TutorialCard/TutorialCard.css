@@ -90,7 +90,7 @@ input[type=number] {
     border-radius: 10px;
 }
 
-button:hover {
+.button:hover {
     border: 3px solid #ff9900;
 }
 
