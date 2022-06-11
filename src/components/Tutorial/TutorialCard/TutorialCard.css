@@ -73,6 +73,41 @@ input[type=number] {
     align-items: flex-start;
 }
 
+/*Power Sign*/
+.base {
+    color: white;
+    margin: 5px 35px;
+    align-items: flex-start;
+}
+
+.exponent {
+    color: white;
+    margin: 5px 65px;
+    align-items: flex-start;
+}
+
+/*Sqrt*/
+.sqrt {
+    color: white;
+    margin: 15px 45px;
+    align-items: flex-start;
+    position: absolute;
+}
+
+/*fraction*/
+.fraction_symbol {
+    width: 60px;
+    height: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.fraction_down {
+    color: white;
+    margin: 5px 35px;
+    align-items: flex-start;
+}
+
 
 /* MATH BUTTON */
 
@@ -99,5 +134,8 @@ input[type=number] {
     height: 60px;
     border-radius: 10px;
 }
+
+
+
 
 

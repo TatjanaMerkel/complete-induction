@@ -47,15 +47,85 @@ function TutorialCard(props: { page: number, title: string, text_1: string, text
                             </div>
                         </div>
                        : ''}
+
+                    {showButton === 2 ?
+                        <div>
+                            <div className="container">
+                                <div className="nVariable">
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                </div>
+                                <div className="flex">
+                                    <img className="symbol" src={require('../../../assets/icons/MathsSymbols/product-small.png')}
+                                         alt="DominoEffekt"/>
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                </div>
+                                <div className="runVariable flex">
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                    =
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                </div>
+                            </div>
+                        </div>
+                       : ''}
+                    
+                    {showButton === 3 ?
+                        <div>
+                            <div className="container">
+                                <div className="exponent">
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                </div>
+                                <div className="base">
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                </div>
+                            </div>
+                        </div>
+                       : ''}
+
+                    {showButton === 4 ?
+                        <div>
+                            <div className="container">
+                                <div className="sqrt">
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                </div>
+                                <img className="symbol" src={require('../../../assets/icons/MathsSymbols/root.png')}
+                                         alt="DominoEffekt"/>
+                            </div>
+                        </div>
+                       : ''}
+
+                    {showButton === 5 ?
+                        <div>
+                            <div className="container">
+                                <div className="nVariable">
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                </div>
+                                <div className="flex">
+                                    <img className="fraction_symbol" src={require('../../../assets/icons/MathsSymbols/fraction_placeholder.png')}
+                                         alt="DominoEffekt"/>
+                                </div>
+                                <div className="fraction_down">
+                                    <input className="inputField" type="number" id="quantity" name="quantity"/>
+                                </div>
+                            </div>
+                        </div>
+                       : ''}
                     <br/>
                     <div className="button-row">
                         <button className="button" onClick={() => setShowButton(1)}>
                             <img className="buttonIcon" src={require('../../../assets/icons/MathsSymbols/sumButton.png')} alt="sum"/>
                         </button>
-                        <button className="button"/>
-                        <button className="button"/>
-                        <button className="button"/>
-                        <button className="button"/>
+                        <button className="button" onClick={() => setShowButton(2)}>
+                            <img className="buttonIcon" src={require('../../../assets/icons/MathsSymbols/product.png')} alt="sum"/>
+                        </button>
+                        <button className="button" onClick={() => setShowButton(3)}>
+                            <img className="buttonIcon" src={require('../../../assets/icons/MathsSymbols/power.png')} alt="sum"/>
+                        </button>
+                        <button className="button" onClick={() => setShowButton(4)}>
+                            <img className="buttonIcon" src={require('../../../assets/icons/MathsSymbols/root.png')} alt="sum"/>
+                        </button>
+                        <button className="button" onClick={() => setShowButton(5)}>
+                            <img className="buttonIcon" src={require('../../../assets/icons/MathsSymbols/fracture.png')} alt="sum"/>
+                        </button>
                     </div>
                 </>
                 : ''}
