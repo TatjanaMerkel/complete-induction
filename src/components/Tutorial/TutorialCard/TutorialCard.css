@@ -31,6 +31,7 @@
     width: 60px;
     height: 60px;
     margin-left: 20px;
+    border-radius: 10px;
 }
 
 .inputField {
@@ -76,29 +77,22 @@ input[type=number] {
 
 /* MATH BUTTON */
 
-.symbolBackground {
-    background-color: #9d52ff;
-    padding: 16px;
-    border-radius: 8px;
-    margin-right: 584px;
-    margin-left: 700px;
+.button-row {
+    display: flex;
+    flex-direction: row;
 }
 
-.symbolButton {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+.button {
+    border: 1px solid white;
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    background-color: #6c2cbe;
-    transform: scale(1.1);
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    margin-right: 20px;
 }
 
-.some {
-    overflow: hidden;
+.buttonIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
 }
+
+
