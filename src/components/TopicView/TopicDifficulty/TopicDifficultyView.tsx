@@ -19,34 +19,34 @@ function TopicDifficultyView() {
     }
 
     function getTextById(id: number){
-        if (id==0){
+        if (id===0){
             return "Summen";
         }
-        if (id==1){
+        if (id===1){
             return "Teilbarkeit";
         }
-        if (id==2){
+        if (id===2){
             return "Fakultäten";
         }
-        if (id==3){
+        if (id===3){
             return "Ungleichung";
         }
         return "";
     }
 
     function getImgById(id: number){
-        var path = "./../../../files/icons/";
-        if (id==0){
+        let path = "./../../../assets/icons/";
+        if (id===0){
             console.log(path+"summenzeichen.png")
             return ("summenzeichen.png");
         }
-        if (id==1){
+        if (id===1){
             return ("discount.png");
         }
-        if (id==2){
+        if (id===2){
             return ("exclamation-mark.png");
         }
-        if (id==3){
+        if (id===3){
             return ("not-equal.png");
         }
         return "";
@@ -55,7 +55,7 @@ function TopicDifficultyView() {
         <div>
             <BackBar texts={["Home", "Topics"]}/>
             <div>
-                <TopicDifficultyWindow text={getTextById(parseInt(page_id))} icon={require("./../../../files/icons/"+getImgById(parseInt(page_id)))}/>
+                <TopicDifficultyWindow text={getTextById(parseInt(page_id))} icon={require("./../../../assets/icons/"+getImgById(parseInt(page_id)))}/>
             </div>
         </div>
     );

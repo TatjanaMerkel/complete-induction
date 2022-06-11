@@ -25,3 +25,79 @@
 }
 
 
+/* SUM SYMBOL */
+
+.symbol {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.inputField {
+    width: 30px;
+    color: white;
+    border: solid 1px white;
+    margin: 4px 0;
+    height: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.runVariable {
+    color: white;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+.nVariable {
+    color: white;
+    margin: 5px 35px;
+    align-items: flex-start;
+}
+
+
+/* MATH BUTTON */
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    padding: 5px;
+}
+
+.button {
+    border: 2px solid white;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    border: 3px solid #ff9900;
+}
+
+.buttonIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+

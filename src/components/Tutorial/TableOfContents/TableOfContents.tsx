@@ -19,6 +19,9 @@ function TableOfContents(props: { pageNumberToParent: (pageNumber: number) => vo
                 <li><a href="#" onClick={() => {
                     props.pageNumberToParent(2)
                 }}>Der Klassiker der Induktionsbeweise</a></li>
+                <li><a href="#" onClick={() => {
+                    props.pageNumberToParent(3)
+                }}>Interaktives Beispiel</a></li>
             </nav>
 
         </nav>

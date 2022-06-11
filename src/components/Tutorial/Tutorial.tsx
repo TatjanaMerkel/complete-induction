@@ -9,9 +9,9 @@ import BackBar from './../BackButton/BackBar';
 function Tutorial() {
 
     const min = 0;
-    const max = 1;
+    const max = 3;
 
-    const [pageNumber, setPageNumber] = useState(0);
+    const [pageNumber, setPageNumber] = useState(3);
 
     const [pageContent,] = useState([
         {
@@ -133,9 +133,14 @@ function Tutorial() {
                           \\[   = \\, \\frac{n \\cdot (n + 1) + 2 \\cdot (n+1)}{2}  \\qquad \\qquad  | \\; (n+1) \\; \\text{ausklammern} \\]
                           \\[   = \\, \\frac{(n + 1) \\cdot (n+2)}{2} \\qquad \\qquad \\qquad  \\qquad  | \\; (n+1) \\; \\text{umformen} \\]
                           \\[   = \\, \\frac{(n + 1) \\cdot ((n+1)+1)}{2} _{q.e.d.}     \\qquad \\qquad  \\qquad \\qquad \\qquad  \\qquad \\] 
-                        
-                        
             `
+        },
+        {
+            titlePage: `<h3 id="title">Interaktives Beispiel</h3>`,
+            contentPage1: ``,
+            contentPage2: '',
+            task: '',
+            solution: ''
         }
     ]);
 
@@ -150,19 +155,20 @@ function Tutorial() {
                                   text_2={pageContent[pageNumber].contentPage2}
                                   task={pageContent[pageNumber].task}
                                   solution={pageContent[pageNumber].solution}
-
                     />
                 </div>
-                <div className="item_2">
-                    <TableOfContents pageNumberToParent ={pageNumber => setPageNumber(pageNumber)} />
+                <div>
+                    <TableOfContents pageNumberToParent={pageNumber => setPageNumber(pageNumber)}/>
                 </div>
             </div>
             <div className="container_2">
                 <div className="item_3">
                     {pageNumber > min ? <div>
-                        <a href="#title"><button className="btn round"
-                                onClick={() => setPageNumber(pageNumber - 1)}
-                        >&#8249; </button></a>
+                        <a href="#title">
+                            <button className="btn round"
+                                    onClick={() => setPageNumber(pageNumber - 1)}
+                            >&#8249; </button>
+                        </a>
                     </div> : pageNumber === min}
 
                 </div>

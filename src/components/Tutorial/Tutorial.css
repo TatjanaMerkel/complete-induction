@@ -14,10 +14,6 @@
     width: 85%;
 }
 
-.item_2 {
-
-}
-
 .item_3 {
     flex-grow: 2;
     margin: 0 15%;
@@ -72,8 +68,6 @@ li {
 
 
 
-
-
 /* PAGE BUTTON */
 
 .btn {
@@ -93,37 +87,6 @@ li {
     background-color: #ddd;
     color: black;
 }
-
-
-/* MATH BUTTON */
-
-.symbolBackground {
-    background-color: #9d52ff;
-    padding: 16px;
-    border-radius: 8px;
-    margin-right: 584px;
-    margin-left: 700px;
-}
-
-.symbolButton {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    background-color: #6c2cbe;
-    transform: scale(1.1);
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    margin-right: 20px;
-}
-
-.some {
-    overflow: hidden;
-}
-
 
 
 
