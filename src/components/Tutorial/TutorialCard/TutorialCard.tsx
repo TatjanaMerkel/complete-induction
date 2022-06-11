@@ -16,7 +16,6 @@ function TutorialCard(props: { page: number, title: string, text_1: string, text
                                      alt="DominoEffekt"/> : ''}
             <MathJax className="card-body" dangerouslySetInnerHTML={{__html: props.text_2}}/>
 
-
             {props.page === 2 ?
                 <div>
                     <MathJax className="card-body task" dangerouslySetInnerHTML={{__html: props.task}}/>
@@ -24,7 +23,27 @@ function TutorialCard(props: { page: number, title: string, text_1: string, text
                 </div>
                 : ''}
 
+            {props.page === 3 ?
+                <div>
+                    <div className="container">
+                        <div className="nVariable">
+                            <input className="inputField" type="number" id="quantity" name="quantity"/>
+                        </div>
+                        <div className="flex">
+                            <img className="symbol" src={require('../../../assets/sum.png')}
+                                 alt="DominoEffekt"/>
+                            <input className="inputField" type="number" id="quantity" name="quantity"/>
+                        </div>
+                        <div className="runVariable flex">
+                            <input className="inputField" type="number" id="quantity" name="quantity"/>
+                            =
+                            <input className="inputField" type="number" id="quantity" name="quantity"/>
+                        </div>
+                    </div>
+                </div>
 
+
+                : ''}
         </div>
     );
 }
