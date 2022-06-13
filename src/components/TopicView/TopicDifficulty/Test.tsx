@@ -9,12 +9,15 @@ import { resolve , format,  formatPreresolved, FormatOptions, ResultNode, Result
 
 function checkEqual(equation1: string, equation2: string){
 
-    var rows = [];    
-
+    var floor : number = 0;
+    if (equation1.includes("sum(")){
+        var newFloor = equation1.split("sum")[1].split(",")[1];
+        floor = parseInt(newFloor);
+        console.log("floor:" + floor);
+    }
     for (var i = 0; i < 1000; i++) {
-        var num =Math.floor(Math.random()*1000+1);
+        var num =Math.floor(Math.random()*1000+floor);
         var ranNumAsStr = num.toString();
-        //console.log(ranNumAsStr);
         var equa1 = parse(equation1.replaceAll('n', ranNumAsStr));
         var equa2 = parse(equation2.replaceAll('n', ranNumAsStr));
         const result1:ResultNode | ResultResolveError = resolve(equa1,{ functions: defaultFunctions });
