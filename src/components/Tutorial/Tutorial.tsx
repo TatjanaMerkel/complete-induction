@@ -13,6 +13,13 @@ function Tutorial() {
 
     const [pageNumber, setPageNumber] = useState(3);
 
+    const goToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     const [pageContent,] = useState([
         {
             titlePage: `<h3 id="title">Was ist vollständige Induktion?</h3>`,
@@ -166,7 +173,11 @@ function Tutorial() {
                     {pageNumber > min ? <div>
                         <a href="#title">
                             <button className="btn round"
-                                    onClick={() => setPageNumber(pageNumber - 1)}
+                                    onClick={() => {
+                                        goToTop();
+                                        setPageNumber(pageNumber - 1); 
+                                        }
+                                    }
                             >&#8249; </button>
                         </a>
                     </div> : pageNumber === min}
@@ -177,7 +188,7 @@ function Tutorial() {
                         <button className="btn round"
                                 onClick={() => {
                                     setPageNumber(pageNumber + 1);
-                                    console.log(pageNumber)
+                                    goToTop();
                                 }}
                         >&#8250; </button>
                     </div> : pageNumber === max}
