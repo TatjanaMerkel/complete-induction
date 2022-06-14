@@ -24,9 +24,9 @@ function TopicDifficultyWindow(props: { text: string; icon: string | undefined;}
                 </select>
             </div>
             <br/>
-            <p>Induktionsbeweis: {props.text}</p>
+            <p className={styles.p_class}>Induktionsbeweis: {props.text}</p>
             <img className={styles.bigIcon} src={props.icon}></img>
-            <p>Löse jetzt X Aufgaben!</p>
+            <p className={styles.p_class}>Löse jetzt X Aufgaben!</p>
             <button className={styles.wideButton} style={{backgroundColor: hover ? "#343D4B": "#CF4545"}} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                 Los geht's
             </button>
