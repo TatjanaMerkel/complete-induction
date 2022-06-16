@@ -1,0 +1,142 @@
+.container{
+    display: inline-block
+}
+
+.card {
+    color: white;
+    font-size: 1em;
+    background-color: #2e3642;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.card-title {
+    padding: 20px;
+    font-size: 44px;
+    text-align: center;
+}
+
+.card-body {
+    font-size: 24px;
+    padding: 22px;
+    line-height: 1.6;
+}
+
+.task {
+    text-align: center;
+    border: white 1px solid;
+    margin: 0 10%;
+}
+
+
+/* SUM SYMBOL */
+
+.symbol {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.inputField {
+    width: 30px;
+    color: white;
+    border: solid 1px white;
+    margin: 4px 0;
+    height: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.runVariable {
+    color: white;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+.nVariable {
+    color: white;
+    margin: 5px 35px;
+    align-items: flex-start;
+}
+
+/*Power Sign*/
+.base {
+    color: white;
+    margin: 5px 35px;
+    align-items: flex-start;
+}
+
+.exponent {
+    color: white;
+    margin: 5px 65px;
+    align-items: flex-start;
+}
+
+/*Sqrt*/
+.sqrt {
+    color: white;
+    margin: 15px 45px;
+    align-items: flex-start;
+    position: absolute;
+}
+
+/*fraction*/
+.fraction_symbol {
+    width: 60px;
+    height: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.fraction_down {
+    color: white;
+    margin: 5px 35px;
+    align-items: flex-start;
+}
+
+
+/* MATH BUTTON */
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    padding: 5px;
+}
+
+.button {
+    border: 2px solid white;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    border: 3px solid #ff9900;
+}
+
+.buttonIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+

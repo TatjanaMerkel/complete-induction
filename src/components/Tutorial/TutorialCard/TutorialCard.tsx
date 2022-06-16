@@ -1,13 +1,20 @@
 import './TutorialCard.css';
 import React, {useState} from "react";
 import {MathJax} from "better-react-mathjax";
+import TutorialSymbols from "./TutorialSymbols/TutorialSymbols";
 
 const DOMPurify = require('dompurify')(window);
 
 function TutorialCard(props: { page: number, title: string, text_1: string, text_2: string, task: string, solution: string }) {
-
+    
+    var symbolArray = new Array;
     const [showButton, setShowButton] = useState(0);
+    const [symbolList, setSymbolList] = useState([<TutorialSymbols/>]);
 
+    function changing() {
+        symbolList.push(<TutorialSymbols/>)
+        setSymbolList(symbolList)
+    }
 
     return (
         <div className="card">
@@ -47,6 +54,9 @@ function TutorialCard(props: { page: number, title: string, text_1: string, text
                             </div>
                         </div>
                        : ''}
+                        <div>
+                        {symbolList}
+                        </div>
 
                     {showButton === 2 ?
                         <div>
