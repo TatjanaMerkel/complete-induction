@@ -6,6 +6,7 @@ import { Equation, EquationEvaluate, EquationOptions, defaultErrorHandler } from
 import { defaultVariables, defaultFunctions } from 'equation-resolver'
 import { parse} from 'equation-parser'
 import { resolve , format,  formatPreresolved, FormatOptions, ResultNode, ResultResolveError, EquationResolveError } from 'equation-resolver'
+import { MathViewComponent } from './MathViewComponent';
 
 function checkEqual(equation1: string, equation2: string){
 
@@ -34,14 +35,15 @@ function checkEqual(equation1: string, equation2: string){
     return "true";
 }
 
-function Test() {
 
+function Test() {
     return (
         <div>
-
+            <MathViewComponent />
             <BackBar texts={["Home"]}/>
                 <div>
                     <p>Test </p>
+                    <textarea id="latex"></textarea>
                     <input></input>
                     <p>{checkEqual('sum(i,1,n+1, 2*i -1)','2*(n+1) -1 + sum(i,1,n, 2*i -1)' )}</p>
                     <EquationOptions
