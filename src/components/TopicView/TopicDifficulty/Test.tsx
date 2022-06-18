@@ -39,12 +39,11 @@ function checkEqual(equation1: string, equation2: string){
 function Test() {
     return (
         <div>
-            <MathViewComponent />
             <BackBar texts={["Home"]}/>
                 <div>
                     <p>Test </p>
-                    <textarea id="latex"></textarea>
-                    <input></input>
+                    <MathViewComponent />
+                    <br/>
                     <p>{checkEqual('sum(i,1,n+1, 2*i -1)','2*(n+1) -1 + sum(i,1,n, 2*i -1)' )}</p>
                     <EquationOptions
                         variables={defaultVariables}
