@@ -1,10 +1,13 @@
 .keyboardToggle{
     width: 45px;
-
+    filter: invert(100%);
+    padding: 5px;
 }
 
 .mathInputField{
     width: 400px;
     float: left;
-    padding-bottom: 20px;
+    padding: 5px;
+    border: dotted 0.5px;
+    margin-left: 20px;
 }
